@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Login with correct data</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>62b01740-82e9-4f0b-8ac4-07c5d7d65b65</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>0c7283b5-dc95-42dc-8ac5-49ca14fec329</id>
+      <masked>false</masked>
+      <name>variable</name>
+   </variable>
+</TestCaseEntity>
