@@ -14,9 +14,9 @@ DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.m
 DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.cucumber.keyword.internal.CucumberDriverCleaner())
 
 
-RunConfiguration.setExecutionSettingFile('C:\\Users\\kryuc\\AppData\\Local\\Temp\\Katalon\\Test Cases\\Login with correct data\\20190705_123526\\execution.properties')
+RunConfiguration.setExecutionSettingFile('C:\\Users\\kryuc\\AppData\\Local\\Temp\\Katalon\\Test Cases\\Login with incorrect data\\20190705_125341\\execution.properties')
 
 TestCaseMain.beforeStart()
 
-        TestCaseMain.runTestCase('Test Cases/Login with correct data', new TestCaseBinding('Test Cases/Login with correct data',[:]), FailureHandling.STOP_ON_FAILURE , false)
+        TestCaseMain.runTestCase('Test Cases/Login with incorrect data', new TestCaseBinding('Test Cases/Login with incorrect data',[:]), FailureHandling.STOP_ON_FAILURE , false)
     
