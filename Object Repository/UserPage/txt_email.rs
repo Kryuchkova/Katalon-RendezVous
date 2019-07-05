@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>CSS</key>
-         <value>.dropdown-menu-inner > li:nth-child(1) > a:nth-child(1)</value>
+         <value> div.dropdown-menu > ul > li:nth-child(1) > a</value>
       </entry>
    </selectorCollection>
    <selectorMethod>CSS</selectorMethod>

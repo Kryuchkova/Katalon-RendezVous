@@ -14,33 +14,51 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+'Открытие браузера'
 WebUI.openBrowser('https://www.rendez-vous.ru/')
 
+'Разворачивание окна браузера на весь экран'
 WebUI.maximizeWindow()
 
+'Ожидание загрузки страницы'
 WebUI.waitForPageLoad(30)
 
+//if (WebUI.verifyElementPresent(findTestObject('MainPage/notification'),10) == true) { viewport 
+//    WebUI.click(findTestObject('MainPage/btn_notification'))
+//}
+'Нажатие на кнопку "Вход в личный кабинет"'
 WebUI.click(findTestObject('MainPage/btn_login'))
 
+'Заполнение поля логин'
 WebUI.sendKeys(findTestObject('LoginPage/input_email'), 'test-case@inbox.ru')
 
+'Заполнение поля пароль'
 WebUI.sendKeys(findTestObject('LoginPage/input_password'), 'test-case')
 
+'Нажатие на кнопку вход'
 WebUI.click(findTestObject('LoginPage/btn_entry'))
 
+'Ожидание загрузки страницы'
 WebUI.waitForPageLoad(10)
 
+'Наведение курсора мыши на иконку личного кабинета'
 WebUI.focus(findTestObject('UserPage/icon_user'))
 
+'Получение логина пользователя'
 email_user = WebUI.getText(findTestObject('UserPage/txt_email'))
 
+'Получение e-mail пользователя'
 email_form = WebUI.getText(findTestObject('UserPage/form_email'))
 
+'Сравнение логина и e-mail'
 WebUI.verifyMatch(email_user, email_form, false)
 
+'Проверка изменения иконки личного кабинета'
 WebUI.verifyElementVisible(findTestObject('UserPage/lbl_user'))
 
+'Выход из личного кабинета'
 WebUI.click(findTestObject('UserPage/btn_exit'))
 
+'Закрытие браузера'
 WebUI.closeBrowser()
 

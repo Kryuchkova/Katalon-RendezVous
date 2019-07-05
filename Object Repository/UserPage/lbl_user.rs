@@ -7,10 +7,14 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//header[@id='header']/div[2]/div/div/div[3]/div[2]/div/a/span</value>
+         <value> div.dropdown-menu > ul > li:nth-child(1) > a</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>a.is-login span.count</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

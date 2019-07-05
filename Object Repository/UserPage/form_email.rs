@@ -7,10 +7,14 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='user-data']/div[2]/div/div/div[2]/dl/dd/div</value>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div.user-data-info.content-data  div:nth-child(2)  dl:nth-child(1)  dd  div</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

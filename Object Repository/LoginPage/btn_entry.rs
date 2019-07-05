@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>CSS</key>
-         <value>#loginForm > div:nth-child(5) > input:nth-child(1)</value>
+         <value>div.form-login input[type='submit']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>CSS</selectorMethod>

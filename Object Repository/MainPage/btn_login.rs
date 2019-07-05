@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>CSS</key>
-         <value>#header > div.header__middle.header__middle-main > div > div > div.header__links.header__links-middle.flex-row.col-3 > div.header__link.mobile-hide.user-bar > div</value>
+         <value>div.user-bar #btn-modal-login </value>
       </entry>
    </selectorCollection>
    <selectorMethod>CSS</selectorMethod>

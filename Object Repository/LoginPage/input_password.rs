@@ -9,8 +9,12 @@
          <key>XPATH</key>
          <value>//input[@id='SiteLoginForm_password']</value>
       </entry>
+      <entry>
+         <key>CSS</key>
+         <value>#SiteLoginForm_password</value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

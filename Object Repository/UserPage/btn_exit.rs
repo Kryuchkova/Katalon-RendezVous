@@ -7,14 +7,14 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//header[@id='header']/div[2]/div/div/div[3]/div[2]/div[2]/ul/li/a</value>
+         <value>//*[text()='Выйти']</value>
       </entry>
       <entry>
          <key>CSS</key>
          <value>#header > div.header__middle.header__middle-main > div > div > div.header__links.header__links-middle.flex-row.col-3 > div.header__link.mobile-hide.user-bar > div.dropdown-menu > ul > li:nth-child(3) > a</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>CSS</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
