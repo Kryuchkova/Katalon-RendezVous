@@ -14,9 +14,9 @@ DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.m
 DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.cucumber.keyword.internal.CucumberDriverCleaner())
 
 
-RunConfiguration.setExecutionSettingFile('C:\\Users\\kryuc\\AppData\\Local\\Temp\\Katalon\\Test Cases\\Region change\\20190705_141952\\execution.properties')
+RunConfiguration.setExecutionSettingFile('C:\\Users\\kryuc\\AppData\\Local\\Temp\\Katalon\\Test Cases\\Prices for promotional items\\20190707_132213\\execution.properties')
 
 TestCaseMain.beforeStart()
 
-        TestCaseMain.runTestCase('Test Cases/Region change', new TestCaseBinding('Test Cases/Region change',[:]), FailureHandling.STOP_ON_FAILURE , false)
+        TestCaseMain.runTestCase('Test Cases/Prices for promotional items', new TestCaseBinding('Test Cases/Prices for promotional items',[:]), FailureHandling.STOP_ON_FAILURE , false)
     
