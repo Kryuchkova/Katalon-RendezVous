@@ -12,11 +12,15 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.By as By
+import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.WebElement as WebElement
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
 'Открытие браузера'
 WebUI.openBrowser('https://www.rendez-vous.ru/')
 
-'Разворачивание окна браузера на всь экран\r\n'
+'Разворачивание окна браузера на всь экран'
 WebUI.maximizeWindow()
 
 'Нажатие на кнопку "Женщинам"'
@@ -28,9 +32,6 @@ WebUI.click(findTestObject('MainPage/btn_shoes'))
 'Нажатие на первый товар ленты'
 WebUI.click(findTestObject('FemaleShoesPage/first_goods'))
 
-'Наименование выбранного товара'
-name_goods = WebUI.getText(findTestObject('GoodsPage/lbl_name'))
-
 'Нажатие на кнопку "Добавить в корзину"'
 WebUI.click(findTestObject('GoodsPage/btn_add_to_cart'))
 
@@ -40,30 +41,50 @@ WebUI.click(findTestObject('GoodsPage/option_size'))
 'Выбор первого из списка размера'
 WebUI.click(findTestObject('GoodsPage/option_first_size'))
 
-'Размер выбранной пары обуви'
-size_goods = WebUI.getText(findTestObject('GoodsPage/lbl_size'))
-
 'Наведение курсора на кнопку "Товар в корзине"'
-WebUI.focus(findTestObject('GoodsPage/btn_add_to_cart'), FailureHandling.STOP_ON_FAILURE)
+WebUI.focus(findTestObject('GoodsPage/btn_add_to_cart'))
 
 'Нажатие на кнопку "Товар в корзине"'
-WebUI.doubleClick(findTestObject('GoodsPage/btn_add_to_cart'))
+WebUI.click(findTestObject('GoodsPage/btn_add_to_cart'))
 
-'Количество товара в корзине'
-count = WebUI.getAttribute(findTestObject('CartPage/lbl_count'), 'value')
+'Нажатие на кнопку "Оформить заказ"'
+WebUI.click(findTestObject('CartPage/btn_checkout'))
 
-'Наименование товара в корзине'
-name = WebUI.getText(findTestObject('CartPage/lbl_name'))
+'Ввод логина'
+WebUI.sendKeys(findTestObject('LoginPage/input_email'), 'test-case@inbox.ru')
 
-'Размер товара в корзине'
-size = WebUI.getText(findTestObject('CartPage/lbl_size'))
+'Ввод пароля'
+WebUI.sendKeys(findTestObject('LoginPage/input_password'), 'test-case')
 
-'Соответствие выбранного товара и товара в корзине по названию'
-WebUI.verifyMatch(name, name_goods, false)
+'Вход в личный кабинет'
+WebUI.click(findTestObject('LoginPage/btn_entry'))
 
-'Соответствие выбранного товара и товара в корзине по размеру'
-WebUI.verifyMatch(size, size_goods, false)
+WebUI.waitForPageLoad(2)
 
-'Соответствие выбранного товара и товара в корзине по количеству'
-WebUI.verifyMatch(count, '1', false)
+WebUI.focus(findTestObject('CartPage/btn_checkout'))
+
+WebUI.doubleClick(findTestObject('CartPage/btn_checkout'))
+
+'Выбор доставки в магазин'
+WebUI.click(findTestObject('CheckoutPage/btn_delivery_shop'))
+
+WebUI.click(findTestObject('CheckoutPage/drop_list_cities'))
+
+'Список магазинов'
+List<WebElement> Shops = WebUI.findWebElements(findTestObject('CheckoutPage/list_cities'), 5)
+
+for (i = 0; i < Shops.size(); i++) {
+    if (Shops.get(i).getText().indexOf('Саратов') != -1) {
+        'Выбор доставки в магазин'
+        Shops.get(i).click()
+
+        break
+    }
+}
+
+'Выбор оплаты при получении'
+WebUI.click(findTestObject('CheckoutPage/btn_payment'))
+
+'Кнопка оформить заказ доступна для нажатия'
+WebUI.verifyElementClickable(findTestObject('CheckoutPage/btn_order_confirm'))
 
