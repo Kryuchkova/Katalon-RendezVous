@@ -12,11 +12,12 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.WebElement as WebElement
 
 'Открытие браузера'
 WebUI.openBrowser('https://www.rendez-vous.ru/')
 
-'Разворачивание окна браузера на весь экран\r\n'
+'Разворачивание окна браузера на весь экран'
 WebUI.maximizeWindow()
 
 'Нажатие на кнопку "Женщинам"'
@@ -25,42 +26,44 @@ WebUI.click(findTestObject('MainPage/btn_female'))
 'Нажатие на кнопку "Обувь"'
 WebUI.click(findTestObject('MainPage/btn_shoes'))
 
-'Нажатие на первый товар ленты'
-WebUI.click(findTestObject('GoodsListPage/first_goods'))
+'Установка фильра по гроду "Саратов"'
+WebUI.click(findTestObject('GoodsListPage/btn_opiton_city'))
 
-'Нажатие на список размеров'
-WebUI.click(findTestObject('GoodsPage/opt_size'))
+WebUI.click(findTestObject('GoodsListPage/drop_list_cities'))
 
-'Выбор первого из списка размера'
-WebUI.click(findTestObject('GoodsPage/option_first_size'))
+'Список городов'
+List<WebElement> Cities = WebUI.findWebElements(findTestObject('GoodsListPage/list_cities'), 5)
 
-'Нажатие на кнопку "Добавить в корзину"'
-WebUI.click(findTestObject('GoodsPage/btn_add_to_cart'))
+print(Cities)
 
-'Нажатие на кнопку "Женщинам"'
-WebUI.click(findTestObject('MainPage/btn_female'))
-
-'Нажатие на кнопку "Сумки"'
-WebUI.click(findTestObject('MainPage/btn_bags'))
-
-'Нажатие на первый товар ленты'
-WebUI.click(findTestObject('GoodsListPage/first_goods'))
-
-'Нажатие на кнопку "Добавить в корзину"'
-WebUI.click(findTestObject('GoodsPage/btn_add_to_cart'))
-
-'Нажатие на иконку "Корзины"'
-WebUI.click(findTestObject('MainPage/btn_cart'))
-
-'Увеличение количества товара в корзине до 5 единиц'
-i = 0
-
-while (i < 4) {
-    WebUI.delay(7)
-    WebUI.click(findTestObject('CartPage/btn_inc'))
-    i++
+for (i = 0; i < Cities.size(); i++) {
+    if (Cities.get(i).getText().indexOf('Саратов') != -1) {
+        'Выбор города Саратов'
+        Cities.get(i).click()
+        break
+    }
 }
 
-'Кнопка "Оформить заказ" недоступна'
-WebUI.verifyElementNotClickable(findTestObject('CartPage/btn_checkout'))
+'Установка фильтра магазинов'
+WebUI.click(findTestObject('GoodsListPage/btn_option_shop'))
+
+WebUI.click(findTestObject('GoodsListPage/checkbox_all_shops'))
+
+'Применение выставленных фильтров к поиску'
+WebUI.click(findTestObject('GoodsListPage/btn_apply'))
+
+'Нажатие на первый товар ленты'
+WebUI.click(findTestObject('GoodsListPage/first_goods'))
+
+'Нажатие на кнопку "Добавить в корзину"'
+WebUI.click(findTestObject('GoodsPage/btn_booking'))
+
+'Получение сообщения пользователю'
+message = WebUI.getText(findTestObject('GoodsPage/lbl_note'))
+
+'Сравнение сообщений'
+WebUI.verifyMatch(message, 'Авторизуйтесь, пожалуйста, на сайте для бронирования товара.', false)
+
+'Закрытие сообщения'
+WebUI.click(findTestObject('GoodsPage/btn_exit'))
 

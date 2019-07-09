@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>first_goods</name>
+   <name>lbl_note</name>
    <tag></tag>
-   <elementGuidId>426b9892-bc34-4ac2-af04-1b36488dc7d6</elementGuidId>
+   <elementGuidId>2e51db7c-6922-4200-a63a-337d19d22cab</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>#list-items   li:first-child > a </value>
+         <value>div.modal-body div.bootbox-body</value>
       </entry>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>CSS</selectorMethod>

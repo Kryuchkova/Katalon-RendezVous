@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>first_goods</name>
+   <name>btn_option_shop</name>
    <tag></tag>
-   <elementGuidId>426b9892-bc34-4ac2-af04-1b36488dc7d6</elementGuidId>
+   <elementGuidId>1c8bc441-68bb-4e32-9051-8aea7c14ab41</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>#list-items   li:first-child > a </value>
+         <key>XPATH</key>
+         <value>//*[text()='Магазин']</value>
       </entry>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
-   <selectorMethod>CSS</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
 </WebElementEntity>

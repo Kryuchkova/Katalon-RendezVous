@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Checkout with 5 products from the Shoes section and products from the Bags section</name>
+   <name>Checkout with 5 products from the Shoes or Bags section and products from the Shoes or Bags section</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>993caa1f-5ff0-4fd2-97e9-c4ea31415715</testCaseGuid>

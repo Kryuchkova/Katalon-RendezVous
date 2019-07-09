@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>first_goods</name>
+   <name>drop_list_cities</name>
    <tag></tag>
-   <elementGuidId>426b9892-bc34-4ac2-af04-1b36488dc7d6</elementGuidId>
+   <elementGuidId>653f4295-a9a0-4584-bd1b-197cd996da10</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>#list-items   li:first-child > a </value>
+         <value>div.filters-secondary div.form-select</value>
       </entry>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>CSS</selectorMethod>

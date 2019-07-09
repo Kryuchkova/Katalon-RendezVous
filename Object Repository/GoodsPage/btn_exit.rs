@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>first_goods</name>
+   <name>btn_exit</name>
    <tag></tag>
-   <elementGuidId>426b9892-bc34-4ac2-af04-1b36488dc7d6</elementGuidId>
+   <elementGuidId>16d18012-75b6-4a5b-95f3-4a8d0ee39092</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>#list-items   li:first-child > a </value>
+         <value>div.modal-body button.bootbox-close-button</value>
       </entry>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>CSS</selectorMethod>

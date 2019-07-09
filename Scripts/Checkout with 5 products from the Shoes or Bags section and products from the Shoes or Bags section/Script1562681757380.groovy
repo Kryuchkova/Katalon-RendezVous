@@ -16,7 +16,7 @@ import internal.GlobalVariable as GlobalVariable
 'Открытие браузера'
 WebUI.openBrowser('https://www.rendez-vous.ru/')
 
-'Разворачивание окна браузера на весь экран\r\n'
+'Разворачивание окна браузера на весь экран'
 WebUI.maximizeWindow()
 
 'Нажатие на кнопку "Женщинам"'
@@ -40,17 +40,11 @@ WebUI.click(findTestObject('GoodsPage/btn_add_to_cart'))
 'Нажатие на кнопку "Женщинам"'
 WebUI.click(findTestObject('MainPage/btn_female'))
 
-'Нажатие на кнопку "Одежда"'
-WebUI.click(findTestObject('MainPage/btn_clothing'))
+'Нажатие на кнопку "Сумки"'
+WebUI.click(findTestObject('MainPage/btn_bags'))
 
 'Нажатие на первый товар ленты'
 WebUI.click(findTestObject('GoodsListPage/first_goods'))
-
-'Нажатие на список размеров'
-WebUI.click(findTestObject('GoodsPage/opt_size'))
-
-'Выбор первого из списка размера'
-WebUI.click(findTestObject('GoodsPage/option_first_size'))
 
 'Нажатие на кнопку "Добавить в корзину"'
 WebUI.click(findTestObject('GoodsPage/btn_add_to_cart'))
@@ -63,14 +57,10 @@ i = 0
 
 while (i < 4) {
     WebUI.delay(7)
-
     WebUI.click(findTestObject('CartPage/btn_inc'))
-
     i++
 }
 
-WebUI.delay(7)
-
-'Кнопка "Оформить заказ" доступна'
-WebUI.verifyElementClickable(findTestObject('CartPage/btn_checkout'))
+'Кнопка "Оформить заказ" недоступна'
+WebUI.verifyElementNotClickable(findTestObject('CartPage/btn_checkout'))
 
