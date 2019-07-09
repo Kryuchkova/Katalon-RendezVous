@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Checkout with 5 products from the Shoes section and products from the Clothing section</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d1883399-f873-4da3-9c13-911755b0df78</testCaseGuid>
+</TestCaseEntity>
