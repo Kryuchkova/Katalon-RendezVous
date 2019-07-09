@@ -77,7 +77,6 @@ for (i = 0; i < Shops.size(); i++) {
     if (Shops.get(i).getText().indexOf('Саратов') != -1) {
         'Выбор доставки в магазин'
         Shops.get(i).click()
-
         break
     }
 }

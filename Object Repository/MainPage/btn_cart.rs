@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>option_first_size</name>
+   <name>btn_cart</name>
    <tag></tag>
-   <elementGuidId>f9b2cd4c-71ce-4f5e-bee8-e334a9e6f836</elementGuidId>
+   <elementGuidId>4fa40518-e29b-44e0-8c50-d62b31a08b35</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>div.form-select-open > ul > li:first-child</value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value></value>
+         <value>div.container #nav-item-cart</value>
       </entry>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>CSS</selectorMethod>

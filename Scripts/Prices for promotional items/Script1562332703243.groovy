@@ -52,20 +52,26 @@ for (i = 0; i < num_pages; i++) {
     'Проверяем цены на корректность'
     for (i = 0; i < Sales.size(); i++) {
         sale = Sales.get(i).getText().replaceAll('-', '')
+
         sale = sale.replaceAll('%', '').toInteger()
+
         p_after = Prices.get(i * 2).getText().replaceAll('\\s', '')
-        p_before = Prices.get(i * 2 + 1).getText().replaceAll('\\s', '').toInteger()
+
+        p_before = Prices.get((i * 2) + 1).getText().replaceAll('\\s', '').toInteger()
 
         print('sale = ')
+
         println(sale)
 
         print('p_before = ')
+
         println(p_before)
-		
+
         print('p_after = ')
+
         println(p_after)
 
-        WebUI.verifyMatch((p_before * (1 - (sale / 100))).toInteger().toString(), p_after, false)
+        WebUI.verifyMatch(p_before * (1 - (sale / 100)).toInteger().toString(), p_after, false)
     }
     
     if (WebUI.waitForElementVisible(findTestObject('SalePage/btn_next'), 10)) {

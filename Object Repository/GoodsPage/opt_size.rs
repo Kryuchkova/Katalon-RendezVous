@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>btn_exit_adv</name>
+   <name>opt_size</name>
    <tag></tag>
-   <elementGuidId>be3d8bbc-1427-4bc5-a80f-740b63b0e932</elementGuidId>
+   <elementGuidId>9d8e56da-2d45-4148-85da-1c32585a248e</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>div.cross</value>
+         <value>#catalog-item  div.item-sizes  div.form-select-text</value>
       </entry>
       <entry>
          <key>BASIC</key>
