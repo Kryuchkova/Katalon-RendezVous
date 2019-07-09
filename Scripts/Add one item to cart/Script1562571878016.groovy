@@ -26,7 +26,7 @@ WebUI.click(findTestObject('MainPage/btn_female'))
 WebUI.click(findTestObject('MainPage/btn_shoes'))
 
 'Нажатие на первый товар ленты'
-WebUI.click(findTestObject('FemaleShoesPage/first_goods'))
+WebUI.click(findTestObject('GoodsListPage/first_goods'))
 
 'Наименование выбранного товара'
 name_goods = WebUI.getText(findTestObject('GoodsPage/lbl_name'))

@@ -37,15 +37,30 @@ WebUI.click(findTestObject('GoodsPage/option_first_size'))
 'Нажатие на кнопку "Добавить в корзину"'
 WebUI.click(findTestObject('GoodsPage/btn_add_to_cart'))
 
+'Нажатие на кнопку "Женщинам"'
+WebUI.click(findTestObject('MainPage/btn_female'))
+
+'Нажатие на кнопку "Сумки"'
+WebUI.click(findTestObject('MainPage/btn_bags'))
+
+'Нажатие на первый товар ленты'
+WebUI.click(findTestObject('GoodsListPage/first_goods'))
+
+'Нажатие на кнопку "Добавить в корзину"'
+WebUI.click(findTestObject('GoodsPage/btn_add_to_cart'))
+
 'Нажатие на иконку "Корзины"'
 WebUI.click(findTestObject('MainPage/btn_cart'))
 
-'Увеличение количества товара в корзине до 6 единиц'
+'Увеличение количества товара в корзине до 5 единиц'
 i = 0
-while (i < 6) {
+
+while (i < 5) {
     WebUI.delay(7)
-	WebUI.click(findTestObject('CartPage/btn_inc'))
-	i++
+
+    WebUI.click(findTestObject('CartPage/btn_inc'))
+
+    i++
 }
 
 'Кнопка "Оформить заказ" недоступна'

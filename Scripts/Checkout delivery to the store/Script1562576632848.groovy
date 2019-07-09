@@ -30,7 +30,7 @@ WebUI.click(findTestObject('MainPage/btn_female'))
 WebUI.click(findTestObject('MainPage/btn_shoes'))
 
 'Нажатие на первый товар ленты'
-WebUI.click(findTestObject('FemaleShoesPage/first_goods'))
+WebUI.click(findTestObject('GoodsListPage/first_goods'))
 
 'Нажатие на кнопку "Добавить в корзину"'
 WebUI.click(findTestObject('GoodsPage/btn_add_to_cart'))

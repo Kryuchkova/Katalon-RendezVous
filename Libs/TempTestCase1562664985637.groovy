@@ -14,9 +14,9 @@ DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.m
 DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.cucumber.keyword.internal.CucumberDriverCleaner())
 
 
-RunConfiguration.setExecutionSettingFile('C:\\Users\\kryuc\\AppData\\Local\\Temp\\Katalon\\Test Cases\\Ordering more than five pairs of shoes\\20190709_130636\\execution.properties')
+RunConfiguration.setExecutionSettingFile('C:\\Users\\kryuc\\AppData\\Local\\Temp\\Katalon\\Test Cases\\Checkout with 5 products from the Shoes section and products from the Bags section\\20190709_133625\\execution.properties')
 
 TestCaseMain.beforeStart()
 
-        TestCaseMain.runTestCase('Test Cases/Ordering more than five pairs of shoes', new TestCaseBinding('Test Cases/Ordering more than five pairs of shoes',[:]), FailureHandling.STOP_ON_FAILURE , false)
+        TestCaseMain.runTestCase('Test Cases/Checkout with 5 products from the Shoes section and products from the Bags section', new TestCaseBinding('Test Cases/Checkout with 5 products from the Shoes section and products from the Bags section',[:]), FailureHandling.STOP_ON_FAILURE , false)
     

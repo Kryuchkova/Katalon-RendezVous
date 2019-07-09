@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>btn_inc</name>
+   <name>btn_bags</name>
    <tag></tag>
-   <elementGuidId>6767b8a0-f165-4045-b27e-1b56ff45dca7</elementGuidId>
+   <elementGuidId>2ccf34f2-61c9-4a50-a474-4439d5b9977a</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>#cart-list-items div:nth-child(1) div > span.addon-2</value>
+         <value>#nav-level-2 > li.nav-item.nav-item-5 > a > span</value>
       </entry>
       <entry>
          <key>BASIC</key>

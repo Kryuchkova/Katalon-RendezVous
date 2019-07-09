@@ -28,10 +28,10 @@ WebUI.click(findTestObject('MainPage/btn_female'))
 WebUI.click(findTestObject('MainPage/btn_shoes'))
 
 'Нажатие на список вохможных сортировок товаров'
-WebUI.click(findTestObject('FemaleShoesPage/btn_sorting'))
+WebUI.click(findTestObject('GoodsListPage/btn_sorting'))
 
 'Выбор сортировки по скидке'
-WebUI.click(findTestObject('FemaleShoesPage/option_sort_by_sale'), FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('GoodsListPage/option_sort_by_sale'), FailureHandling.STOP_ON_FAILURE)
 
 'Ожидание загрузки страницы'
 WebUI.waitForPageLoad(10)
