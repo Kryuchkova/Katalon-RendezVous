@@ -53,7 +53,7 @@ WebUI.click(findTestObject('GoodsListPage/checkbox_all_shops'))
 WebUI.click(findTestObject('GoodsListPage/btn_apply'))
 
 'Нажатие на первый товар ленты'
-WebUI.click(findTestObject('GoodsListPage/first_goods'))
+WebUI.click(findTestObject('GoodsListPage/first_results_goods'))
 
 'Нажатие на кнопку "Добавить в корзину"'
 WebUI.click(findTestObject('GoodsPage/btn_booking'))
