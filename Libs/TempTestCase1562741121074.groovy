@@ -14,9 +14,9 @@ DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.m
 DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.cucumber.keyword.internal.CucumberDriverCleaner())
 
 
-RunConfiguration.setExecutionSettingFile('C:\\Users\\kryuc\\AppData\\Local\\Temp\\Katalon\\Test Cases\\Checkout with 5 products from the Shoes section and products from the Clothing section\\20190709_182049\\execution.properties')
+RunConfiguration.setExecutionSettingFile('C:\\Users\\kryuc\\AppData\\Local\\Temp\\Katalon\\Test Cases\\Reservation of goods in the store for an authorized user\\20190710_104521\\execution.properties')
 
 TestCaseMain.beforeStart()
 
-        TestCaseMain.runTestCase('Test Cases/Checkout with 5 products from the Shoes section and products from the Clothing section', new TestCaseBinding('Test Cases/Checkout with 5 products from the Shoes section and products from the Clothing section',[:]), FailureHandling.STOP_ON_FAILURE , false)
+        TestCaseMain.runTestCase('Test Cases/Reservation of goods in the store for an authorized user', new TestCaseBinding('Test Cases/Reservation of goods in the store for an authorized user',[:]), FailureHandling.STOP_ON_FAILURE , false)
     

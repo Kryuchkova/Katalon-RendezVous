@@ -20,6 +20,20 @@ WebUI.openBrowser('https://www.rendez-vous.ru/')
 'Разворачивание окна браузера на весь экран'
 WebUI.maximizeWindow()
 
+'Вход в личный кабинет'
+WebUI.click(findTestObject('MainPage/btn_login'))
+
+'Ввод логина'
+WebUI.sendKeys(findTestObject('LoginPage/input_email'), 'test-case@inbox.ru')
+
+'Ввод пароля'
+WebUI.sendKeys(findTestObject('LoginPage/input_password'), 'test-case')
+
+'Нажатие на кнопку "Вход"'
+WebUI.click(findTestObject('LoginPage/btn_entry'))
+
+WebUI.delay(5)
+
 'Нажатие на кнопку "Женщинам"'
 WebUI.click(findTestObject('MainPage/btn_female'))
 
@@ -37,8 +51,8 @@ List<WebElement> Cities = WebUI.findWebElements(findTestObject('GoodsListPage/li
 print(Cities)
 
 for (i = 0; i < Cities.size(); i++) {
-    if (Cities.get(i).getText().indexOf('Саратов') != -1) {
-        'Выбор города Саратов'
+    if (Cities.get(i).getText().indexOf('Челябинск') != -1) {
+        'Выбор города Челябинска'
         Cities.get(i).click()
         break
     }
@@ -52,18 +66,23 @@ WebUI.click(findTestObject('GoodsListPage/checkbox_all_shops'))
 'Применение выставленных фильтров к поиску'
 WebUI.click(findTestObject('GoodsListPage/btn_apply'))
 
+WebUI.delay(3)
+
 'Нажатие на первый товар ленты'
 WebUI.click(findTestObject('GoodsListPage/first_result_goods'))
 
-'Нажатие на кнопку "Забронировать в магазине"'
+'Нажатие на список размеров'
+WebUI.click(findTestObject('GoodsPage/opt_size'))
+
+'Выбор первого из списка размера'
+WebUI.click(findTestObject('GoodsPage/option_first_size'))
+
+'Нажатие на кнопку "Забронировать в магазие"'
 WebUI.click(findTestObject('GoodsPage/btn_booking'))
 
-'Получение сообщения пользователю'
-message = WebUI.getText(findTestObject('GoodsPage/lbl_note'))
+'Выбор магазина'
+WebUI.click(findTestObject('BookingPage/radiobtn_shop_option'))
 
-'Сравнение сообщений'
-WebUI.verifyMatch(message, 'Авторизуйтесь, пожалуйста, на сайте для бронирования товара.', false)
-
-'Закрытие сообщения'
-WebUI.click(findTestObject('GoodsPage/btn_exit'))
+'Кнопка "Отправить бронь" доступна'
+WebUI.verifyElementClickable(findTestObject('BookingPage/btn_submit'))
 
