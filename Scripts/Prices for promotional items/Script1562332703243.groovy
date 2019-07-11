@@ -31,7 +31,7 @@ WebUI.click(findTestObject('SalePage/checkbox_videoview'))
 'Ожидание загрузки страницы'
 WebUI.waitForPageLoad(10)
 
-'Количество страницы результата поиска'
+'Количество страниц результата поиска'
 num_pages = WebUI.getText(findTestObject('SalePage/num_pages')).toInteger()
 
 'Сбор всех цен и скидок в массив'
