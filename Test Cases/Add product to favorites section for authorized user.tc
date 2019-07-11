@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Add product to favorites section for authorized user</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>7b489215-d297-4886-8eb5-9aff973a9af1</testCaseGuid>
+</TestCaseEntity>

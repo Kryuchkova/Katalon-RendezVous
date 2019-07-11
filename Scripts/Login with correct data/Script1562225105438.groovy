@@ -23,9 +23,6 @@ WebUI.maximizeWindow()
 'Ожидание загрузки страницы'
 WebUI.waitForPageLoad(30)
 
-//if (WebUI.verifyElementPresent(findTestObject('MainPage/notification'),10) == true) { viewport 
-//    WebUI.click(findTestObject('MainPage/btn_notification'))
-//}
 'Нажатие на кнопку "Вход в личный кабинет"'
 WebUI.click(findTestObject('MainPage/btn_login'))
 
