@@ -36,7 +36,6 @@ for (i = 0; i < Types.size(); i++) {
     if (Types.get(i).getText().indexOf('Портфель') != -1) {
         'Выбор тип "Портфель"'
         Types.get(i).click()
-
         break
     }
 }
@@ -51,7 +50,6 @@ for (i = 0; i < Styles.size(); i++) {
     if (Styles.get(i).getText().indexOf('Casual') != -1) {
         'Выбор стиля "Casual"'
         Styles.get(i).click()
-
         break
     }
 }
