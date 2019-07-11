@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>list_objects</name>
+   <name>btn_order</name>
    <tag></tag>
-   <elementGuidId>dde15cef-9bda-48fe-b59d-032e47c78150</elementGuidId>
+   <elementGuidId>05ce4991-5913-4e35-9497-85a2f068b211</elementGuidId>
    <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>div.btn-set > input</value>
+      </entry>
       <entry>
          <key>BASIC</key>
          <value></value>
-      </entry>
-      <entry>
-         <key>CSS</key>
-         <value>div.filter-panel-open ul.scroll-content li</value>
       </entry>
    </selectorCollection>
    <selectorMethod>CSS</selectorMethod>

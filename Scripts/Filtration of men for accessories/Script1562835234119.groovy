@@ -30,7 +30,7 @@ WebUI.click(findTestObject('MainPage/btn_accessories'))
 WebUI.click(findTestObject('GoodsListPage/btn_option_type'))
 
 'Список типов'
-List<WebElement> Types = WebUI.findWebElements(findTestObject('GoodsListPage/list_objects'), 5)
+List<WebElement> Types = WebUI.findWebElements(findTestObject('GoodsListPage/list_types'), 5)
 
 for (i = 0; i < Types.size(); i++) {
     if (Types.get(i).getText().indexOf('Кошелёк') != -1) {
