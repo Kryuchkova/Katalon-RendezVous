@@ -12,60 +12,50 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.By as By
-import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
-import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
-'Открытие браузера'
 WebUI.openBrowser('https://www.rendez-vous.ru/')
 
-'Разворачивание окна браузера на всь экран'
 WebUI.maximizeWindow()
 
-'Нажатие на кнопку "Женщинам"'
 WebUI.click(findTestObject('MainPage/btn_female'))
 
-'Нажатие на кнопку "Обувь"'
 WebUI.click(findTestObject('MainPage/btn_shoes'))
 
-'Нажатие на первый товар ленты'
-WebUI.click(findTestObject('GoodsListPage/first_goods'))
+WebUI.click(findTestObject('GoodsListPage/first_result_goods'))
 
-'Нажатие на кнопку "Добавить в корзину"'
-WebUI.click(findTestObject('GoodsPage/btn_add_to_cart'))
+WebUI.click(findTestObject('GoodsPage/opt_size'))
 
-'Нажатие на список размеров'
-WebUI.click(findTestObject('GoodsPage/option_size'))
-
-'Выбор первого из списка размера'
 WebUI.click(findTestObject('GoodsPage/option_first_size'))
 
-'Наведение курсора на кнопку "Товар в корзине"'
-WebUI.focus(findTestObject('GoodsPage/btn_add_to_cart'))
-
-'Нажатие на кнопку "Товар в корзине"'
 WebUI.click(findTestObject('GoodsPage/btn_add_to_cart'))
 
-'Нажатие на кнопку "Оформить заказ"'
-WebUI.click(findTestObject('CartPage/btn_checkout'))
+WebUI.click(findTestObject('MainPage/btn_female'))
 
-'Ввод логина'
+WebUI.click(findTestObject('MainPage/btn_clothing'))
+
+WebUI.click(findTestObject('GoodsListPage/first_result_goods'))
+
+WebUI.click(findTestObject('GoodsPage/opt_size'))
+
+WebUI.click(findTestObject('GoodsPage/option_first_size'))
+
+WebUI.click(findTestObject('GoodsPage/btn_add_to_cart'))
+
+WebUI.click(findTestObject('MainPage/btn_login'))
+
 WebUI.sendKeys(findTestObject('LoginPage/input_email'), 'test-case@inbox.ru')
 
-'Ввод пароля'
 WebUI.sendKeys(findTestObject('LoginPage/input_password'), 'test-case')
 
-'Вход в личный кабинет'
 WebUI.click(findTestObject('LoginPage/btn_entry'))
 
-WebUI.waitForPageLoad(2)
+WebUI.delay(3)
 
-WebUI.focus(findTestObject('CartPage/btn_checkout'))
+WebUI.click(findTestObject('MainPage/btn_cart'))
 
-WebUI.doubleClick(findTestObject('CartPage/btn_checkout'))
+WebUI.click(findTestObject('CartPage/btn_checkout'))
 
-'Выбор доставки в магазин'
 WebUI.click(findTestObject('CheckoutPage/btn_delivery_shop'))
 
 WebUI.click(findTestObject('CheckoutPage/drop_list_cities'))
@@ -82,9 +72,29 @@ for (i = 0; i < Shops.size(); i++) {
     }
 }
 
-'Выбор оплаты при получении'
+WebUI.delay(3)
+
 WebUI.click(findTestObject('CheckoutPage/btn_payment'))
 
-'Кнопка оформить заказ доступна для нажатия'
-WebUI.verifyElementClickable(findTestObject('CheckoutPage/btn_order_confirm'))
+cash_fprice = WebUI.getText(findTestObject('CheckoutPage/lbl_first_price')).replaceAll('\\s', '')
+
+cash_disc = WebUI.getText(findTestObject('CheckoutPage/lbl_discount_amount')).replaceAll('\\s', '').toInteger()
+
+cash_tprice = WebUI.getText(findTestObject('CheckoutPage/lbl_total_price')).replaceAll('\\s', '').toInteger()
+
+WebUI.click(findTestObject('CheckoutPage/btn_cloudpay'))
+
+cloud_fprice = WebUI.getText(findTestObject('CheckoutPage/lbl_first_price')).replaceAll('\\s', '')
+
+cloud_disc = WebUI.getText(findTestObject('CheckoutPage/lbl_discount_amount')).replaceAll('\\s', '').toInteger()
+
+cloud_tprice = WebUI.getText(findTestObject('CheckoutPage/lbl_total_price')).replaceAll('\\s', '').toInteger()
+
+WebUI.verifyMatch(cash_fprice, cloud_fprice, false)
+
+WebUI.verifyGreaterThan(cloud_disc, cash_disc)
+
+WebUI.verifyGreaterThan(cash_tprice, cloud_tprice)
+
+WebUI.verifyLessThan(Math.abs((cloud_disc - cash_disc) - Math.round(cash_tprice * 0.05)), 10 )
 

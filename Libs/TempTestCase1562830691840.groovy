@@ -14,9 +14,9 @@ DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.m
 DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.cucumber.keyword.internal.CucumberDriverCleaner())
 
 
-RunConfiguration.setExecutionSettingFile('C:\\Users\\kryuc\\AppData\\Local\\Temp\\Katalon\\Test Cases\\Reservation of goods in the store for an authorized user\\20190710_104735\\execution.properties')
+RunConfiguration.setExecutionSettingFile('C:\\Users\\kryuc\\AppData\\Local\\Temp\\Katalon\\Test Cases\\Additional discount to pay online\\20190711_113811\\execution.properties')
 
 TestCaseMain.beforeStart()
 
-        TestCaseMain.runTestCase('Test Cases/Reservation of goods in the store for an authorized user', new TestCaseBinding('Test Cases/Reservation of goods in the store for an authorized user',[:]), FailureHandling.STOP_ON_FAILURE , false)
+        TestCaseMain.runTestCase('Test Cases/Additional discount to pay online', new TestCaseBinding('Test Cases/Additional discount to pay online',[:]), FailureHandling.STOP_ON_FAILURE , false)
     
