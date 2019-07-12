@@ -20,16 +20,19 @@ WebUI.openBrowser('https://www.rendez-vous.ru/')
 'Разворачивание окна браузера на всь экран'
 WebUI.maximizeWindow()
 
+'Добавление скриншотов и подсветки элементов'
+CustomKeywords.'HighlightElement.pandemic'(GlobalVariable.G_Path, GlobalVariable.G_Name)
+
 'Нажатие на кнопку "Мужчинам"'
 WebUI.click(findTestObject('MainPage/btn_male'))
 
 'Нажатие на кнопку "Акссессуары"'
 WebUI.click(findTestObject('MainPage/btn_accessories'))
 
-'Выбор типа акссессуара'
+'Выбор "тип"'
 WebUI.click(findTestObject('GoodsListPage/btn_option_type'))
 
-'Список типов'
+'Список "типов"'
 List<WebElement> Types = WebUI.findWebElements(findTestObject('GoodsListPage/list_types'), 5)
 
 for (i = 0; i < Types.size(); i++) {
@@ -51,7 +54,6 @@ WebUI.sendKeys(findTestObject('GoodsListPage/input_to_price'), '13000')
 
 'Применение фильтров'
 WebUI.click(findTestObject('GoodsListPage/btn_apply'))
-
 WebUI.delay(3)
 
 'Сбор всех цен, названий и фильтров в массив'

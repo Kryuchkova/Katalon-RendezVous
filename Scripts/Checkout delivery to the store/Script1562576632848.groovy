@@ -20,8 +20,11 @@ import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 'Открытие браузера'
 WebUI.openBrowser('https://www.rendez-vous.ru/')
 
-'Разворачивание окна браузера на всь экран'
+'Разворачивание окна браузера на весь экран'
 WebUI.maximizeWindow()
+
+'Добавление скриншотов и подсветки элементов'
+CustomKeywords.'HighlightElement.pandemic'(GlobalVariable.G_Path, GlobalVariable.G_Name)
 
 'Нажатие на кнопку "Женщинам"'
 WebUI.click(findTestObject('MainPage/btn_female'))
@@ -58,26 +61,19 @@ WebUI.sendKeys(findTestObject('LoginPage/input_password'), 'test-case')
 
 'Вход в личный кабинет'
 WebUI.click(findTestObject('LoginPage/btn_entry'))
-
-WebUI.waitForPageLoad(2)
-
-WebUI.focus(findTestObject('CartPage/btn_checkout'))
-
-WebUI.doubleClick(findTestObject('CartPage/btn_checkout'))
+WebUI.delay(4)
+WebUI.click(findTestObject('CartPage/btn_checkout'))
 
 'Выбор доставки в магазин'
 WebUI.click(findTestObject('CheckoutPage/btn_delivery_shop'))
-
 WebUI.click(findTestObject('CheckoutPage/drop_list_cities'))
 
 'Список магазинов'
 List<WebElement> Shops = WebUI.findWebElements(findTestObject('CheckoutPage/list_cities'), 5)
-
 for (i = 0; i < Shops.size(); i++) {
     if (Shops.get(i).getText().indexOf('Саратов') != -1) {
         'Выбор доставки в магазин'
         Shops.get(i).click()
-
         break
     }
 }

@@ -19,6 +19,9 @@ WebUI.openBrowser('https://www.rendez-vous.ru/')
 'Разворачивание окна браузера на весь экран'
 WebUI.maximizeWindow()
 
+'Добавление скриншотов и подсветки элементов'
+CustomKeywords.'HighlightElement.pandemic'(GlobalVariable.G_Path, GlobalVariable.G_Name)
+
 'Нажатие на кнопку "Женщинам"'
 WebUI.click(findTestObject('MainPage/btn_female'))
 
@@ -57,7 +60,6 @@ goods_new_price = WebUI.getText(findTestObject('CartPage/lbl_new_price')).replac
 
 'Получение цены товара без скидки'
 goods_old_price = WebUI.getText(findTestObject('CartPage/lbl_old_price')).replaceAll('\\s', '')
-
 WebUI.delay(3)
 
 'Получение скидки на товар'

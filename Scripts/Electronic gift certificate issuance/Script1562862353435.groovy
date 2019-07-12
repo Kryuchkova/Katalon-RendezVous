@@ -17,28 +17,29 @@ import org.openqa.selenium.WebElement as WebElement
 'Открытие браузера'
 WebUI.openBrowser('https://www.rendez-vous.ru/')
 
-'Разворачивание окна браузера на всь экран'
+'Разворачивание окна браузера на весь экран'
 WebUI.maximizeWindow()
+
+'Добавление скриншотов и подсветки элементов'
+CustomKeywords.'HighlightElement.pandemic'(GlobalVariable.G_Path, GlobalVariable.G_Name)
 
 'Переход к низу страницы'
 WebUI.scrollToElement(findTestObject('MainPage/btn_gift_certificate'), 5)
 
 'Переход в раздел "Электронный сертификат"'
 WebUI.click(findTestObject('MainPage/btn_gift_certificate'))
-
 WebUI.delay(3)
 
-'Выбор номинала'
+'Выбор "Номинала"'
 WebUI.click(findTestObject('GiftCertificatePage/drop_nominal'))
 
-'Список номиналов'
+'Список "Номиналов"'
 List<WebElement> Nominals = WebUI.findWebElements(findTestObject('GiftCertificatePage/list_nominal'), 5)
 
 for (i = 0; i < Nominals.size(); i++) {
     if (Nominals.get(i).getText().indexOf('5 000 руб.') != -1) {
         'Выбор номинала "5 000 руб."'
         Nominals.get(i).click()
-
         break
     }
 }

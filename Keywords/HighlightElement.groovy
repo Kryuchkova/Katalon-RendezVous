@@ -38,12 +38,6 @@ public class HighlightElement {
 
 	private static List<String> influencedKeywords = ['click', 'sendKeys', 'getText', 'getAttribute']
 
-	/**
-	 * change some of methods of WebUiBuiltInKeywords so that they call HighlightElement.on(testObject)
-	 * before invoking their original method body.
-	 *
-	 * http://docs.groovy-lang.org/latest/html/documentation/core-metaprogramming.html#metaprogramming
-	 */
 	@Keyword
 	public static void pandemic(String path, String type) {
 		WebUI.metaClass.'static'.invokeMethod = { String name, args ->

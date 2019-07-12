@@ -16,8 +16,11 @@ import internal.GlobalVariable as GlobalVariable
 'Открытие браузера'
 WebUI.openBrowser('https://www.rendez-vous.ru/')
 
-'Разворачивание окна браузера на всь экран'
+'Разворачивание окна браузера на весь экран'
 WebUI.maximizeWindow()
+
+'Добавление скриншотов и подсветки элементов'
+CustomKeywords.'HighlightElement.pandemic'(GlobalVariable.G_Path, GlobalVariable.G_Name)
 
 'Переход к низу страницы'
 WebUI.scrollToElement(findTestObject('MainPage/btn_gift_certificate'), 5)
@@ -47,7 +50,8 @@ WebUI.click(findTestObject('MainPage/btn_appstore'))
 WebUI.switchToWindowIndex(1)
 
 'Получение заголовка приложения'
-text = WebUI.getText(findTestObject('LinksPage/lbl_appstore')).split(' ')
+text = WebUI.getText(findTestObject('LinksPage/lbl_appstore'))
+text = text.split(' ')
 
 'Соответствие приложения ссылке'
 WebUI.verifyMatch(text[0], 'Rendez-Vous', false)
@@ -65,7 +69,8 @@ WebUI.click(findTestObject('MainPage/btn_facebook'))
 WebUI.switchToWindowIndex(1)
 
 'Получение заголовка приложения'
-text = WebUI.getText(findTestObject('LinksPage/lbl_facebook')).split(' ')
+text = WebUI.getText(findTestObject('LinksPage/lbl_facebook'))
+text = text.split(' ')
 
 'Соответствие приложения ссылке'
 WebUI.verifyMatch(text[0], 'Rendez-Vous', false)
@@ -83,7 +88,8 @@ WebUI.click(findTestObject('MainPage/btn_vkontakte'))
 WebUI.switchToWindowIndex(1)
 
 'Получение заголовка приложения'
-text = WebUI.getText(findTestObject('LinksPage/lbl_vkontakte')).split(' ')
+text = WebUI.getText(findTestObject('LinksPage/lbl_vkontakte'))
+text = text.split(' ')
 
 'Соответствие приложения ссылке'
 WebUI.verifyMatch(text[0], 'Rendez-Vous', false)
@@ -101,7 +107,8 @@ WebUI.click(findTestObject('MainPage/btn_instagram'))
 WebUI.switchToWindowIndex(1)
 
 'Получение заголовка приложения'
-text = WebUI.getText(findTestObject('LinksPage/lbl_instagram')).split(' ')
+text = WebUI.getText(findTestObject('LinksPage/lbl_instagram'))
+text = text.split(' ')
 
 'Соответствие приложения ссылке'
 WebUI.verifyMatch(text[0], 'Rendez-Vous', false)
@@ -119,7 +126,8 @@ WebUI.click(findTestObject('MainPage/btn_youtube'))
 WebUI.switchToWindowIndex(1)
 
 'Получение заголовка приложения'
-text = WebUI.getText(findTestObject('LinksPage/lbl_youtube')).split(' ')
+text = WebUI.getText(findTestObject('LinksPage/lbl_youtube'))
+text = text.split(' ')
 
 'Соответствие приложения ссылке'
 WebUI.verifyMatch(text[0], 'Rendez-Vous', false)

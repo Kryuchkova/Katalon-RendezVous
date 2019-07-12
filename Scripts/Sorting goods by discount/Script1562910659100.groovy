@@ -18,8 +18,11 @@ import org.openqa.selenium.WebElement as WebElement
 'Открытие браузера'
 WebUI.openBrowser('https://www.rendez-vous.ru/')
 
-'Разворачивание окна браузера на весь экран\r\n'
+'Разворачивание окна браузера на весь экран'
 WebUI.maximizeWindow()
+
+'Добавление скриншотов и подсветки элементов'
+CustomKeywords.'HighlightElement.pandemic'(GlobalVariable.G_Path, GlobalVariable.G_Name)
 
 'Нажатие на кнопку "Женщинам"'
 WebUI.click(findTestObject('MainPage/btn_female'))
@@ -27,7 +30,7 @@ WebUI.click(findTestObject('MainPage/btn_female'))
 'Нажатие на кнопку "Обувь"'
 WebUI.click(findTestObject('MainPage/btn_shoes'))
 
-'Нажатие на список вохможных сортировок товаров'
+'Нажатие на список возможных сортировок товаров'
 WebUI.click(findTestObject('GoodsListPage/btn_sorting'))
 
 'Выбор сортировки по скидке'
@@ -37,7 +40,8 @@ WebUI.click(findTestObject('GoodsListPage/option_sort_by_sale'), FailureHandling
 WebUI.waitForPageLoad(10)
 
 'Количество страницы результата поиска'
-num_pages = WebUI.getText(findTestObject('SalePage/num_pages')).toInteger()
+num_pages = 20
+// num_pages = WebUI.getText(findTestObject('SalePage/num_pages')).toInteger()
 
 'Ожидание загрузки страницы'
 WebUI.waitForPageLoad(10)
@@ -45,28 +49,25 @@ WebUI.waitForPageLoad(10)
 'Сбор всех скидок в массив'
 List<WebElement> Sales = []
 actual_sales = []
-for (i = 0; i < 30; i++) {
-    'Ожидание загрузки страницы'
-    WebUI.waitForPageLoad(5)
-	
-	'Скидки'
+i = 0
+while (i < num_pages) {
+    'Скидки'
     Sales = WebUI.findWebElements(findTestObject('SalePage/lbl_sales'), 5)
-	
-	for (i = 0; i < Sales.size() - 1; i++) {
-		num = Sales.get(i).getText().replaceAll('-', '')
+	for (j = 0; j < Sales.size() - 1; j++) {
+		num = Sales.get(j).getText().replaceAll('-', '')
 		num = num.replaceAll('%', '').toInteger()		
 		actual_sales.add(num)		
 	}
-    
-    if (WebUI.waitForElementVisible(findTestObject('SalePage/btn_next'), 10)) {
-        WebUI.click(findTestObject('SalePage/btn_next'))
-    }
+	'Ожидание загрузки страницы'
+	WebUI.delay(3)	
+    WebUI.click(findTestObject('SalePage/btn_next'))
+	i++
 }
-
 
 'Проверяем сортировку на корректность'
 for (i = 0; i < actual_sales.size() - 1; i++) {
 	WebUI.verifyGreaterThanOrEqual(actual_sales.get(i), actual_sales.get(i + 1))
 }
+
 
 

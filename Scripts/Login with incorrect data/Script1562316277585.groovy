@@ -19,8 +19,8 @@ WebUI.openBrowser('https://www.rendez-vous.ru/')
 'Разворачивание окна браузера на весь экран'
 WebUI.maximizeWindow()
 
-'Ожидание загрузки страницы'
-WebUI.waitForPageLoad(10)
+'Добавление скриншотов и подсветки элементов'
+CustomKeywords.'HighlightElement.pandemic'(GlobalVariable.G_Path, GlobalVariable.G_Name)
 
 'Нажатие на кнопку "Вход в личный кабинет"'
 WebUI.click(findTestObject('MainPage/btn_login'))

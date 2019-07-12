@@ -20,6 +20,9 @@ WebUI.openBrowser('https://www.rendez-vous.ru/')
 'Разворачивание окна браузера на весь экран'
 WebUI.maximizeWindow()
 
+'Добавление скриншотов и подсветки элементов'
+CustomKeywords.'HighlightElement.pandemic'(GlobalVariable.G_Path, GlobalVariable.G_Name)
+
 'Вход в личный кабинет'
 WebUI.click(findTestObject('MainPage/btn_login'))
 
@@ -31,7 +34,6 @@ WebUI.sendKeys(findTestObject('LoginPage/input_password'), 'test-case')
 
 'Нажатие на кнопку "Вход"'
 WebUI.click(findTestObject('LoginPage/btn_entry'))
-
 WebUI.delay(5)
 
 'Нажатие на кнопку "Женщинам"'
@@ -40,16 +42,12 @@ WebUI.click(findTestObject('MainPage/btn_female'))
 'Нажатие на кнопку "Обувь"'
 WebUI.click(findTestObject('MainPage/btn_shoes'))
 
-'Установка фильра по гроду "Саратов"'
+'Установка фильра по городу "Челябинск"'
 WebUI.click(findTestObject('GoodsListPage/btn_opiton_city'))
-
 WebUI.click(findTestObject('GoodsListPage/drop_list_cities'))
 
 'Список городов'
 List<WebElement> Cities = WebUI.findWebElements(findTestObject('GoodsListPage/list_cities'), 5)
-
-print(Cities)
-
 for (i = 0; i < Cities.size(); i++) {
     if (Cities.get(i).getText().indexOf('Челябинск') != -1) {
         'Выбор города Челябинска'
@@ -60,12 +58,10 @@ for (i = 0; i < Cities.size(); i++) {
 
 'Установка фильтра магазинов'
 WebUI.click(findTestObject('GoodsListPage/btn_option_shop'))
-
 WebUI.click(findTestObject('GoodsListPage/checkbox_all_shops'))
 
 'Применение выставленных фильтров к поиску'
 WebUI.click(findTestObject('GoodsListPage/btn_apply'))
-
 WebUI.delay(3)
 
 'Нажатие на первый товар ленты'

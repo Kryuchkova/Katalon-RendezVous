@@ -17,8 +17,11 @@ import org.openqa.selenium.WebElement as WebElement
 'Открытие браузера'
 WebUI.openBrowser('https://www.rendez-vous.ru/')
 
-'Разворачивание окна браузера на всь экран'
+'Разворачивание окна браузера на весь экран'
 WebUI.maximizeWindow()
+
+'Добавление скриншотов и подсветки элементов'
+CustomKeywords.'HighlightElement.pandemic'(GlobalVariable.G_Path, GlobalVariable.G_Name)
 
 'Нажатие на кнопку "Мужчинам"'
 WebUI.click(findTestObject('MainPage/btn_male'))
@@ -26,12 +29,11 @@ WebUI.click(findTestObject('MainPage/btn_male'))
 'Нажатие на кнопку "Сумки"'
 WebUI.click(findTestObject('MainPage/btn_bags'))
 
-'Выбор типа сумки'
+'Выбор "тип"'
 WebUI.click(findTestObject('GoodsListPage/btn_option_type'))
 
-'Список типов'
+'Список "типов"'
 List<WebElement> Types = WebUI.findWebElements(findTestObject('GoodsListPage/list_types'), 5)
-
 for (i = 0; i < Types.size(); i++) {
     if (Types.get(i).getText().indexOf('Портфель') != -1) {
         'Выбор тип "Портфель"'
@@ -40,12 +42,11 @@ for (i = 0; i < Types.size(); i++) {
     }
 }
 
-'Выбор стиля'
+'Выбор "стиля"'
 WebUI.click(findTestObject('GoodsListPage/btn_option_style'))
 
-'Список стилей'
+'Список "стилей"'
 List<WebElement> Styles = WebUI.findWebElements(findTestObject('GoodsListPage/list_types'), 5)
-
 for (i = 0; i < Styles.size(); i++) {
     if (Styles.get(i).getText().indexOf('Casual') != -1) {
         'Выбор стиля "Casual"'
@@ -58,19 +59,15 @@ WebUI.delay(3)
 
 'Применение фильтров'
 WebUI.click(findTestObject('GoodsListPage/btn_apply'))
-
 WebUI.delay(3)
 
 'Фильтры'
 List<WebElement> Filters = WebUI.findWebElements(findTestObject('GoodsListPage/lbl_men_filters'), 5)
-
 type = Filters.get(0).getText().toUpperCase()
-
 option_style = Filters.get(1).getText().toUpperCase()
 
 'Выбор первого товара из ленты'
 WebUI.click(findTestObject('GoodsListPage/first_result_goods'))
-
 WebUI.delay(3)
 
 'Проверяем товар на соответствие выбранному типу и стилю'
@@ -91,12 +88,11 @@ WebUI.click(findTestObject('GoodsPage/btn_order_by_click'))
 'Ввод имени'
 WebUI.sendKeys(findTestObject('OneClickPage/input_name'), 'qwerty')
 
-'Ввод телефона\r\n'
+'Ввод телефона'
 WebUI.sendKeys(findTestObject('OneClickPage/input_phone'), '1234567890')
 
 'Нажатие на список магазинов'
 WebUI.click(findTestObject('OneClickPage/drop_shop_list'))
-
 WebUI.delay(2)
 
 'Выбор первого доступного магазина'

@@ -22,6 +22,11 @@ WebUI.openBrowser('https://www.rendez-vous.ru/')
 'Разворачивание окна браузера на весь экран'
 WebUI.maximizeWindow()
 
+'Добавление скриншотов и подсветки элементов'
+CustomKeywords.'HighlightElement.pandemic'(GlobalVariable.G_Path, GlobalVariable.G_Name)
+
+WebUI.click(findTestObject('MainPage/btn_female'))
+
 'Нажатие на кнопку "Sale"'
 WebUI.click(findTestObject('MainPage/btn_sale'))
 
@@ -58,18 +63,6 @@ for (i = 0; i < num_pages; i++) {
         p_after = Prices.get(i * 2).getText().replaceAll('\\s', '')
 
         p_before = Prices.get((i * 2) + 1).getText().replaceAll('\\s', '').toInteger()
-
-        print('sale = ')
-
-        println(sale)
-
-        print('p_before = ')
-
-        println(p_before)
-
-        print('p_after = ')
-
-        println(p_after)
 
         WebUI.verifyMatch(Math.round(p_before * (1 - (sale / 100))).toString(), p_after, false)
     }

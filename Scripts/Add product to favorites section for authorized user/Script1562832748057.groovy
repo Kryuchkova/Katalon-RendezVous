@@ -17,8 +17,11 @@ import org.apache.commons.lang.ArrayUtils
 'Открытие браузера'
 WebUI.openBrowser('https://www.rendez-vous.ru/')
 
-'Разворачивание окна браузера на всь экран'
+'Разворачивание окна браузера на весь экран'
 WebUI.maximizeWindow()
+
+'Добавление скриншотов и подсветки элементов'
+CustomKeywords.'HighlightElement.pandemic'(GlobalVariable.G_Path, GlobalVariable.G_Name)
 
 'Нажатие на кнопку "Вход в личный кабинет"'
 WebUI.click(findTestObject('MainPage/btn_login'))
@@ -31,7 +34,6 @@ WebUI.sendKeys(findTestObject('LoginPage/input_password'), 'test-case')
 
 'Нажатие на кнопку вход'
 WebUI.click(findTestObject('LoginPage/btn_entry'))
-
 WebUI.delay(3)
 
 'Нажатие на кнопку "Женщинам"'
@@ -54,7 +56,6 @@ WebUI.verifyMatch(msg, 'Выберите, пожалуйста, размер д�
 
 'Закрытие сообщения'
 WebUI.click(findTestObject('GoodsPage/btn_exit'))
-
 WebUI.delay(3)
 
 'Нажатие на список размеров'
@@ -62,7 +63,6 @@ WebUI.click(findTestObject('GoodsPage/opt_size'))
 
 'Выбор первого из списка размера'
 WebUI.click(findTestObject('GoodsPage/option_first_size'))
-
 WebUI.scrollToPosition(0, 0)
 
 'Нажатие на кнопку "Добавить в избранное"'
@@ -70,7 +70,6 @@ WebUI.click(findTestObject('GoodsPage/btn_favorite'))
 
 'Получение кода модели'
 code = WebUI.getText(findTestObject('GoodsPage/lbl_code')).toUpperCase().replaceAll('\\s', '')
-
 items = code.split(',')
 
 'Нажатие на кнопку "Избранное"'
@@ -78,14 +77,13 @@ WebUI.click(findTestObject('MainPage/btn_favorite'))
 
 'Получение кода модели'
 model = WebUI.getText(findTestObject('FavoritePage/lbl_code')).toUpperCase().replaceAll('\\s', '')
-
 words = model.split(',')
 println words
 ArrayUtils.reverse(words)
 println items
 println words
 for (i = 0; i < words.size(); i++) {
-    'Соответствие моделей в избранном'
+    'Соответствие моделей в "Избранном"'
     WebUI.verifyMatch(items[i], words[i], false)
 }
 

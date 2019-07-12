@@ -17,8 +17,11 @@ import org.openqa.selenium.Keys as Keys
 'Открытие браузера'
 WebUI.openBrowser('https://www.rendez-vous.ru/')
 
-'Разворачивание окна браузера на весь экран\r\n'
+'Разворачивание окна браузера на весь экран'
 WebUI.maximizeWindow()
+
+'Добавление скриншотов и подсветки элементов'
+CustomKeywords.'HighlightElement.pandemic'(GlobalVariable.G_Path, GlobalVariable.G_Name)
 
 'Получение текущего региона'
 old_city = WebUI.getText(findTestObject('MainPage/btn_region'))
@@ -45,7 +48,7 @@ WebUI.sendKeys(findTestObject('RegionPage/input_region'), 'Самара')
 WebUI.sendKeys(findTestObject('RegionPage/input_region'), Keys.chord(Keys.ENTER))
 
 'Получение текущего региона'
-new_city = WebUI.getText(findTestObject('MainPage/btn_region'))
+new_city = WebUI.getText(findTestObject('MainPage/lbl_region'))
 
 'Сравнение прошлого и нового региона'
 WebUI.verifyNotMatch(old_city, new_city, false)

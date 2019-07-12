@@ -16,8 +16,11 @@ import internal.GlobalVariable as GlobalVariable
 'Открытие браузера'
 WebUI.openBrowser('https://www.rendez-vous.ru/')
 
-'Разворачивание окна браузера на всь экран'
+'Разворачивание окна браузера на весь экран'
 WebUI.maximizeWindow()
+
+'Добавление скриншотов и подсветки элементов'
+CustomKeywords.'HighlightElement.pandemic'(GlobalVariable.G_Path, GlobalVariable.G_Name)
 
 'Нажатие на кнопку "Женщинам"'
 WebUI.click(findTestObject('MainPage/btn_female'))
@@ -39,7 +42,6 @@ WebUI.verifyMatch(msg, 'Выберите, пожалуйста, размер д�
 
 'Закрытие сообщения'
 WebUI.click(findTestObject('GoodsPage/btn_exit'))
-
 WebUI.delay(3)
 
 'Нажатие на список размеров'
@@ -47,7 +49,6 @@ WebUI.click(findTestObject('GoodsPage/opt_size'))
 
 'Выбор первого из списка размера'
 WebUI.click(findTestObject('GoodsPage/option_first_size'))
-
 WebUI.scrollToPosition(0, 0)
 
 'Нажатие на кнопку "Добавить в избранное"'

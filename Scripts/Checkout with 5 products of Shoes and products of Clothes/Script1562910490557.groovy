@@ -16,8 +16,11 @@ import internal.GlobalVariable as GlobalVariable
 'Открытие браузера'
 WebUI.openBrowser('https://www.rendez-vous.ru/')
 
-'Разворачивание окна браузера на весь экран\r\n'
+'Разворачивание окна браузера на весь экран'
 WebUI.maximizeWindow()
+
+'Добавление скриншотов и подсветки элементов'
+CustomKeywords.'HighlightElement.pandemic'(GlobalVariable.G_Path, GlobalVariable.G_Name)
 
 'Нажатие на кнопку "Женщинам"'
 WebUI.click(findTestObject('MainPage/btn_female'))
@@ -60,12 +63,9 @@ WebUI.click(findTestObject('MainPage/btn_cart'))
 
 'Увеличение количества товара в корзине до 5 единиц'
 i = 0
-
 while (i < 4) {
     WebUI.delay(7)
-
     WebUI.click(findTestObject('CartPage/btn_inc'))
-
     i++
 }
 
