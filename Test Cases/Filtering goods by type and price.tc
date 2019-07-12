@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Filtration of men for accessories</name>
+   <name>Filtering goods by type and price</name>
    <tag></tag>
    <comment>Сбор всех цен, названий и фильтров в массив</comment>
    <testCaseGuid>5abaf077-54f7-430a-8fe8-0808ab9ae0f2</testCaseGuid>
