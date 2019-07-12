@@ -45,7 +45,7 @@ WebUI.waitForPageLoad(10)
 'Сбор всех скидок в массив'
 List<WebElement> Sales = []
 actual_sales = []
-for (i = 0; i < num_pages; i++) {
+for (i = 0; i < 30; i++) {
     'Ожидание загрузки страницы'
     WebUI.waitForPageLoad(5)
 	

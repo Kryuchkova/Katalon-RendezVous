@@ -40,6 +40,3 @@ error_msg = WebUI.getText(findTestObject('LoginPage/error-msg'))
 'Проверка сообщения об ошибке'
 WebUI.verifyMatch(error_msg, 'Аккаунт не существует', false)
 
-'Закрытие браузера\r\n'
-WebUI.closeBrowser()
-

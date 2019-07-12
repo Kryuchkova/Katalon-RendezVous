@@ -44,6 +44,8 @@ WebUI.focus(findTestObject('UserPage/icon_user'))
 'Получение логина пользователя'
 email_user = WebUI.getText(findTestObject('UserPage/txt_email'))
 
+WebUI.delay(2)
+
 'Получение e-mail пользователя'
 email_form = WebUI.getText(findTestObject('UserPage/form_email'))
 
@@ -56,6 +58,4 @@ WebUI.verifyElementVisible(findTestObject('UserPage/lbl_user'))
 'Выход из личного кабинета'
 WebUI.click(findTestObject('UserPage/btn_exit'))
 
-'Закрытие браузера'
-WebUI.closeBrowser()
 

@@ -71,7 +71,7 @@ for (i = 0; i < num_pages; i++) {
 
         println(p_after)
 
-        WebUI.verifyMatch(p_before * 1 - (sale / 100).toInteger().toString(), p_after, false)
+        WebUI.verifyMatch(Math.round(p_before * (1 - (sale / 100))).toString(), p_after, false)
     }
     
     if (WebUI.waitForElementVisible(findTestObject('SalePage/btn_next'), 10)) {
