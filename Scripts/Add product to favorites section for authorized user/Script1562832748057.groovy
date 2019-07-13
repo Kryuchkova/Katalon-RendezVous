@@ -12,7 +12,9 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-import org.apache.commons.lang.ArrayUtils
+import org.apache.commons.lang.ArrayUtils as ArrayUtils
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
+
 
 'Открытие браузера'
 WebUI.openBrowser('https://www.rendez-vous.ru/')
@@ -34,6 +36,7 @@ WebUI.sendKeys(findTestObject('LoginPage/input_password'), 'test-case')
 
 'Нажатие на кнопку вход'
 WebUI.click(findTestObject('LoginPage/btn_entry'))
+
 WebUI.delay(3)
 
 'Нажатие на кнопку "Женщинам"'
@@ -56,6 +59,7 @@ WebUI.verifyMatch(msg, 'Выберите, пожалуйста, размер д�
 
 'Закрытие сообщения'
 WebUI.click(findTestObject('GoodsPage/btn_exit'))
+
 WebUI.delay(3)
 
 'Нажатие на список размеров'
@@ -63,6 +67,7 @@ WebUI.click(findTestObject('GoodsPage/opt_size'))
 
 'Выбор первого из списка размера'
 WebUI.click(findTestObject('GoodsPage/option_first_size'))
+
 WebUI.scrollToPosition(0, 0)
 
 'Нажатие на кнопку "Добавить в избранное"'
@@ -70,6 +75,7 @@ WebUI.click(findTestObject('GoodsPage/btn_favorite'))
 
 'Получение кода модели'
 code = WebUI.getText(findTestObject('GoodsPage/lbl_code')).toUpperCase().replaceAll('\\s', '')
+
 items = code.split(',')
 
 'Нажатие на кнопку "Избранное"'
@@ -77,11 +83,17 @@ WebUI.click(findTestObject('MainPage/btn_favorite'))
 
 'Получение кода модели'
 model = WebUI.getText(findTestObject('FavoritePage/lbl_code')).toUpperCase().replaceAll('\\s', '')
+
 words = model.split(',')
-println words
+
+println(words)
+
 ArrayUtils.reverse(words)
-println items
-println words
+
+println(items)
+
+println(words)
+
 for (i = 0; i < words.size(); i++) {
     'Соответствие моделей в "Избранном"'
     WebUI.verifyMatch(items[i], words[i], false)
@@ -94,5 +106,7 @@ WebUI.click(findTestObject('FavoritePage/btn_delete'))
 msg = WebUI.getText(findTestObject('FavoritePage/lbl_note'))
 
 'Корректность сообщения'
-WebUI.verifyMatch(msg, 'У Вас нет товаров в Избранном', false)
+if (!WebUI.verifyMatch(msg, 'У Вас нет товаров в Избранном', false)){
+	KeywordUtil.markFailed('ERROR: The Messege Result Does NOT Match the Expected MSG Results')
+}
 
