@@ -12,6 +12,7 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 'Открытие браузера'
 WebUI.openBrowser('https://www.rendez-vous.ru/')
@@ -35,7 +36,9 @@ WebUI.switchToWindowIndex(1)
 text = WebUI.getText(findTestObject('LinksPage/lbl_googleplay')).split(' ')
 
 'Соответствие приложения ссылке'
-WebUI.verifyMatch(text[0], 'Rendez-Vous', false)
+if (!WebUI.verifyMatch(text[0], 'Rendez-Vous', false)){
+	KeywordUtil.markFailed('ERROR: The Actual App Does NOT Match the Expected App')
+}
 
 'Закрытие побочной страницы'
 WebUI.closeWindowIndex(1)
@@ -54,7 +57,9 @@ text = WebUI.getText(findTestObject('LinksPage/lbl_appstore'))
 text = text.split(' ')
 
 'Соответствие приложения ссылке'
-WebUI.verifyMatch(text[0], 'Rendez-Vous', false)
+if (!WebUI.verifyMatch(text[0], 'Rendez-Vous', false)){
+	KeywordUtil.markFailed('ERROR: The Actual App Does NOT Match the Expected App')
+}
 
 'Закрытие побочной страницы'
 WebUI.closeWindowIndex(1)
@@ -73,7 +78,9 @@ text = WebUI.getText(findTestObject('LinksPage/lbl_facebook'))
 text = text.split(' ')
 
 'Соответствие приложения ссылке'
-WebUI.verifyMatch(text[0], 'Rendez-Vous', false)
+if (!WebUI.verifyMatch(text[0], 'Rendez-Vous', false)){
+	KeywordUtil.markFailed('ERROR: The Actual App Does NOT Match the Expected App')
+}
 
 'Закрытие побочной страницы'
 WebUI.closeWindowIndex(1)
@@ -92,7 +99,9 @@ text = WebUI.getText(findTestObject('LinksPage/lbl_vkontakte'))
 text = text.split(' ')
 
 'Соответствие приложения ссылке'
-WebUI.verifyMatch(text[0], 'Rendez-Vous', false)
+if (!WebUI.verifyMatch(text[0], 'Rendez-Vous', false)){
+	KeywordUtil.markFailed('ERROR: The Actual App Does NOT Match the Expected App')
+}
 
 'Закрытие побочной страницы'
 WebUI.closeWindowIndex(1)
@@ -111,7 +120,9 @@ text = WebUI.getText(findTestObject('LinksPage/lbl_instagram'))
 text = text.split(' ')
 
 'Соответствие приложения ссылке'
-WebUI.verifyMatch(text[0], 'Rendez-Vous', false)
+if (!WebUI.verifyMatch(text[0], 'Rendez-Vous', false)){
+	KeywordUtil.markFailed('ERROR: The Actual App Does NOT Match the Expected App')
+}
 
 'Закрытие побочной страницы'
 WebUI.closeWindowIndex(1)
@@ -130,7 +141,9 @@ text = WebUI.getText(findTestObject('LinksPage/lbl_youtube'))
 text = text.split(' ')
 
 'Соответствие приложения ссылке'
-WebUI.verifyMatch(text[0], 'Rendez-Vous', false)
+if (!WebUI.verifyMatch(text[0], 'Rendez-Vous', false)){
+	KeywordUtil.markFailed('ERROR: The Actual App Does NOT Match the Expected App')
+}
 
 'Закрытие побочной страницы'
 WebUI.closeWindowIndex(1)

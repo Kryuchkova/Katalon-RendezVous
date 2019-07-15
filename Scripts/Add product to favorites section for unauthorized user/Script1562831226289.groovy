@@ -12,6 +12,7 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 'Открытие браузера'
 WebUI.openBrowser('https://www.rendez-vous.ru/')
@@ -38,7 +39,9 @@ WebUI.click(findTestObject('GoodsPage/btn_favorite'))
 msg = WebUI.getText(findTestObject('GoodsPage/lbl_note'))
 
 'Корректность сообщения'
-WebUI.verifyMatch(msg, 'Выберите, пожалуйста, размер для добавления товара в "Избранное".', false)
+if (!WebUI.verifyMatch(msg, 'Выберите, пожалуйста, размер для добавления товара в "Избранное".', false)){
+	KeywordUtil.markFailed('ERROR: The Actual Message Result Does NOT Match the Expected Message Results')
+}
 
 'Закрытие сообщения'
 WebUI.click(findTestObject('GoodsPage/btn_exit'))
@@ -58,7 +61,9 @@ WebUI.click(findTestObject('GoodsPage/btn_favorite'))
 msg = WebUI.getText(findTestObject('GoodsPage/lbl_note'))
 
 'Корректность сообщения'
-WebUI.verifyMatch(msg, 'Авторизуйтесь, чтобы добавить товар в Избранное', false)
+if (!WebUI.verifyMatch(msg, 'Авторизуйтесь, чтобы добавить товар в Избранное', false)){
+	KeywordUtil.markFailed('ERROR: The Actual Message Result Does NOT Match the Expected Message Results')
+}
 
 'Закрытие сообщения'
 WebUI.click(findTestObject('GoodsPage/btn_exit'))

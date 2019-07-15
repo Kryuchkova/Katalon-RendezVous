@@ -12,6 +12,7 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 'Открытие браузера'
 WebUI.openBrowser('https://www.rendez-vous.ru/')
@@ -38,5 +39,6 @@ WebUI.click(findTestObject('LoginPage/btn_entry'))
 error_msg = WebUI.getText(findTestObject('LoginPage/error-msg'))
 
 'Проверка сообщения об ошибке'
-WebUI.verifyMatch(error_msg, 'Аккаунт не существует', false)
-
+if (!WebUI.verifyMatch(error_msg, 'Аккаунт не существует', false)){
+	KeywordUtil.markFailed('ERROR: The Actual Login Does NOT Match the User Email')
+}

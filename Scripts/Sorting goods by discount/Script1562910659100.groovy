@@ -14,6 +14,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.By as By
 import org.openqa.selenium.WebElement as WebElement
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 'Открытие браузера'
 WebUI.openBrowser('https://www.rendez-vous.ru/')
@@ -66,7 +67,9 @@ while (i < num_pages) {
 
 'Проверяем сортировку на корректность'
 for (i = 0; i < actual_sales.size() - 1; i++) {
-	WebUI.verifyGreaterThanOrEqual(actual_sales.get(i), actual_sales.get(i + 1))
+	if (!WebUI.verifyGreaterThanOrEqual(actual_sales.get(i), actual_sales.get(i + 1))){
+		KeywordUtil.markFailed('ERROR: The Actual Price Does NOT GREATER THAN Or EQUAL the Expected Price')
+	}
 }
 
 

@@ -13,6 +13,7 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 'Открытие браузера'
 WebUI.openBrowser('https://www.rendez-vous.ru/')
@@ -51,7 +52,9 @@ WebUI.sendKeys(findTestObject('RegionPage/input_region'), Keys.chord(Keys.ENTER)
 new_city = WebUI.getText(findTestObject('MainPage/lbl_region'))
 
 'Сравнение прошлого и нового региона'
-WebUI.verifyNotMatch(old_city, new_city, false)
+if (!WebUI.verifyNotMatch(old_city, new_city, false)){
+	KeywordUtil.markFailed('ERROR: The Actual City Does NOT Match the Expected City')
+}
 
 'Нажатие на кнопку "Магазины"'
 WebUI.click(findTestObject('MainPage/btn_shops'))
@@ -60,8 +63,6 @@ WebUI.click(findTestObject('MainPage/btn_shops'))
 shop_city = WebUI.getText(findTestObject('ShopPage/select_shop'))
 
 'Сравнение текущего города и города, для которого составлен список магазинов'
-WebUI.verifyMatch(new_city, shop_city, false)
-
-'Закрытие браузера'
-WebUI.closeBrowser(FailureHandling.STOP_ON_FAILURE)
-
+if (!WebUI.verifyMatch(new_city, shop_city, false)){
+	KeywordUtil.markFailed('ERROR: The Actual City Does NOT Match the Expected City')
+}

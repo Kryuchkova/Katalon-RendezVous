@@ -13,6 +13,7 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.WebElement as WebElement
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 'Открытие браузера'
 WebUI.openBrowser('https://www.rendez-vous.ru/')
@@ -60,8 +61,9 @@ WebUI.click(findTestObject('GoodsPage/btn_booking'))
 message = WebUI.getText(findTestObject('GoodsPage/lbl_note'))
 
 'Сравнение сообщений'
-WebUI.verifyMatch(message, 'Авторизуйтесь, пожалуйста, на сайте для бронирования товара.', false)
-
+if (!WebUI.verifyMatch(message, 'Авторизуйтесь, пожалуйста, на сайте для бронирования товара.', false)){
+	KeywordUtil.markFailed('ERROR: The Actual Message Result Does NOT Match the Expected Message Results')
+}
 'Закрытие сообщения'
 WebUI.click(findTestObject('GoodsPage/btn_exit'))
 

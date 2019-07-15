@@ -13,6 +13,7 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.WebElement as WebElement
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 'Открытие браузера'
 WebUI.openBrowser('https://www.rendez-vous.ru/')
@@ -120,14 +121,22 @@ cloud_disc = WebUI.getText(findTestObject('CheckoutPage/lbl_discount_amount')).r
 cloud_tprice = WebUI.getText(findTestObject('CheckoutPage/lbl_total_price')).replaceAll('\\s', '').toInteger()
 
 'Сравнение первоначальной стоимости товара'
-WebUI.verifyMatch(cash_fprice, cloud_fprice, false)
+if (!WebUI.verifyMatch(cash_fprice, cloud_fprice, false)){
+	KeywordUtil.markFailed('ERROR: The Actual Price Does NOT Match the Expected Price')
+}
 
 'Сравнение скидок на товар'
-WebUI.verifyGreaterThan(cloud_disc, cash_disc)
+if (!WebUI.verifyGreaterThan(cloud_disc, cash_disc)){
+	KeywordUtil.markFailed('ERROR: The Actual Card Sale Does NOT GREATER THAN the Expected Cash Sale')
+}
 
 'Сравнение итоговой стоимости товара'
-WebUI.verifyGreaterThan(cash_tprice, cloud_tprice)
+if (!WebUI.verifyGreaterThan(cash_tprice, cloud_tprice)){
+	KeywordUtil.markFailed('ERROR: The Actual Total Price Does NOT Match the Expected Total Price')
+}
 
 'Проверка размера скидки при оплате онлайн'
-WebUI.verifyLessThan(Math.abs((cloud_disc - cash_disc) - Math.round(cash_tprice * 0.05)), 10)
+if (!WebUI.verifyLessThan(Math.abs((cloud_disc - cash_disc) - Math.round(cash_tprice * 0.05)), 10)){
+	KeywordUtil.markFailed('ERROR: The Actual Sale Does NOT Match the Expected 5% Sale')
+}
 

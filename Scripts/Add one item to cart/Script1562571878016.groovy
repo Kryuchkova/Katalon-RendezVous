@@ -12,6 +12,7 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 'Открытие браузера'
 WebUI.openBrowser('https://www.rendez-vous.ru/')
@@ -58,10 +59,16 @@ name = WebUI.getText(findTestObject('CartPage/lbl_name'))
 size = WebUI.getText(findTestObject('CartPage/lbl_size'))
 
 'Соответствие выбранного товара и товара в корзине по названию'
-WebUI.verifyMatch(name, name_goods, false)
+if (!WebUI.verifyMatch(name, name_goods, false)){
+	KeywordUtil.markFailed('ERROR: The Actual Name Does NOT Match the Expected Name')
+}
 
 'Соответствие выбранного товара и товара в корзине по размеру'
-WebUI.verifyMatch(size, size_goods, false)
+if (!WebUI.verifyMatch(size, size_goods, false)){
+	KeywordUtil.markFailed('ERROR: The Actual Size Does NOT Match the Expected Size')
+}
 
 'Соответствие выбранного товара и товара в корзине по количеству'
-WebUI.verifyMatch(count, '1', false)
+if (!WebUI.verifyMatch(count, '1', false)){
+	KeywordUtil.markFailed('ERROR: The Actual Count Does NOT Match the Expected Count')
+}

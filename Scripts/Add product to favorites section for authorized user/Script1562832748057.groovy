@@ -15,7 +15,6 @@ import internal.GlobalVariable as GlobalVariable
 import org.apache.commons.lang.ArrayUtils as ArrayUtils
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-
 'Открытие браузера'
 WebUI.openBrowser('https://www.rendez-vous.ru/')
 
@@ -55,11 +54,12 @@ WebUI.click(findTestObject('GoodsPage/btn_favorite'))
 msg = WebUI.getText(findTestObject('GoodsPage/lbl_note'))
 
 'Корректность сообщения'
-WebUI.verifyMatch(msg, 'Выберите, пожалуйста, размер для добавления товара в "Избранное".', false)
+if (!WebUI.verifyMatch(msg, 'Выберите, пожалуйста, размер для добавления товара в "Избранное".', false)){
+	KeywordUtil.markFailed('ERROR: The Actual Message Result Does NOT Match the Expected Message Results')
+}
 
 'Закрытие сообщения'
 WebUI.click(findTestObject('GoodsPage/btn_exit'))
-
 WebUI.delay(3)
 
 'Нажатие на список размеров'
@@ -67,7 +67,6 @@ WebUI.click(findTestObject('GoodsPage/opt_size'))
 
 'Выбор первого из списка размера'
 WebUI.click(findTestObject('GoodsPage/option_first_size'))
-
 WebUI.scrollToPosition(0, 0)
 
 'Нажатие на кнопку "Добавить в избранное"'
@@ -75,7 +74,6 @@ WebUI.click(findTestObject('GoodsPage/btn_favorite'))
 
 'Получение кода модели'
 code = WebUI.getText(findTestObject('GoodsPage/lbl_code')).toUpperCase().replaceAll('\\s', '')
-
 items = code.split(',')
 
 'Нажатие на кнопку "Избранное"'
@@ -83,16 +81,8 @@ WebUI.click(findTestObject('MainPage/btn_favorite'))
 
 'Получение кода модели'
 model = WebUI.getText(findTestObject('FavoritePage/lbl_code')).toUpperCase().replaceAll('\\s', '')
-
 words = model.split(',')
-
-println(words)
-
 ArrayUtils.reverse(words)
-
-println(items)
-
-println(words)
 
 for (i = 0; i < words.size(); i++) {
     'Соответствие моделей в "Избранном"'
@@ -107,6 +97,6 @@ msg = WebUI.getText(findTestObject('FavoritePage/lbl_note'))
 
 'Корректность сообщения'
 if (!WebUI.verifyMatch(msg, 'У Вас нет товаров в Избранном', false)){
-	KeywordUtil.markFailed('ERROR: The Messege Result Does NOT Match the Expected MSG Results')
+	KeywordUtil.markFailed('ERROR: The Actual Message Result Does NOT Match the Expected Message Result')
 }
 

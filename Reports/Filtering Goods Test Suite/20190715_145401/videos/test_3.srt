@@ -1,0 +1,1512 @@
+1
+00:00:00,169 --> 00:00:00,169
+3. Открытие браузера
+
+2
+00:00:02,860 --> 00:00:02,860
+9. Разворачивание окна браузера на весь экран
+
+3
+00:00:02,868 --> 00:00:02,869
+15. Добавление скриншотов и подсветки элементов
+
+4
+00:00:02,869 --> 00:00:02,870
+19. click(findTestObject("MainPage/btn_female"))
+
+5
+00:00:05,305 --> 00:00:05,306
+25. Нажатие на кнопку "Sale"
+
+6
+00:00:07,925 --> 00:00:07,925
+31. Выбор позиций с видеообзором
+
+7
+00:00:10,991 --> 00:00:10,992
+37. Ожидание загрузки страницы
+
+8
+00:00:11,002 --> 00:00:11,002
+43. Количество страниц результата поиска
+
+9
+00:00:11,672 --> 00:00:11,673
+49. Сбор всех цен и скидок в массив
+
+10
+00:00:11,673 --> 00:00:11,673
+53. Sales = []
+
+11
+00:00:11,673 --> 00:00:11,673
+57. for ([i = 0, i < num_pages, (i++)])
+
+12
+00:00:11,674 --> 00:00:11,674
+3. Ожидание загрузки страницы
+
+13
+00:00:11,681 --> 00:00:11,681
+9. Цены товаров
+
+14
+00:00:11,716 --> 00:00:11,717
+15. Скидки
+
+15
+00:00:11,742 --> 00:00:11,742
+21. Проверяем цены на корректность
+
+16
+00:00:11,743 --> 00:00:11,743
+1. sale = getText().replaceAll("-", "")
+
+17
+00:00:11,819 --> 00:00:11,820
+5. sale = replaceAll("%", "").toInteger()
+
+18
+00:00:11,820 --> 00:00:11,820
+9. p_after = getText().replaceAll("\s", "")
+
+19
+00:00:11,896 --> 00:00:11,896
+13. p_before = replaceAll("\s", "").toInteger()
+
+20
+00:00:11,968 --> 00:00:11,968
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+21
+00:00:12,013 --> 00:00:12,014
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+22
+00:00:12,019 --> 00:00:12,019
+1. sale = getText().replaceAll("-", "")
+
+23
+00:00:12,089 --> 00:00:12,090
+5. sale = replaceAll("%", "").toInteger()
+
+24
+00:00:12,090 --> 00:00:12,090
+9. p_after = getText().replaceAll("\s", "")
+
+25
+00:00:12,167 --> 00:00:12,168
+13. p_before = replaceAll("\s", "").toInteger()
+
+26
+00:00:12,250 --> 00:00:12,251
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+27
+00:00:12,253 --> 00:00:12,254
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+28
+00:00:12,254 --> 00:00:12,254
+1. sale = getText().replaceAll("-", "")
+
+29
+00:00:12,336 --> 00:00:12,337
+5. sale = replaceAll("%", "").toInteger()
+
+30
+00:00:12,337 --> 00:00:12,337
+9. p_after = getText().replaceAll("\s", "")
+
+31
+00:00:12,438 --> 00:00:12,438
+13. p_before = replaceAll("\s", "").toInteger()
+
+32
+00:00:12,526 --> 00:00:12,526
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+33
+00:00:12,529 --> 00:00:12,529
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+34
+00:00:12,529 --> 00:00:12,529
+1. sale = getText().replaceAll("-", "")
+
+35
+00:00:12,596 --> 00:00:12,596
+5. sale = replaceAll("%", "").toInteger()
+
+36
+00:00:12,596 --> 00:00:12,596
+9. p_after = getText().replaceAll("\s", "")
+
+37
+00:00:12,666 --> 00:00:12,666
+13. p_before = replaceAll("\s", "").toInteger()
+
+38
+00:00:12,732 --> 00:00:12,732
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+39
+00:00:12,735 --> 00:00:12,735
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+40
+00:00:12,736 --> 00:00:12,736
+1. sale = getText().replaceAll("-", "")
+
+41
+00:00:12,804 --> 00:00:12,804
+5. sale = replaceAll("%", "").toInteger()
+
+42
+00:00:12,805 --> 00:00:12,805
+9. p_after = getText().replaceAll("\s", "")
+
+43
+00:00:12,879 --> 00:00:12,880
+13. p_before = replaceAll("\s", "").toInteger()
+
+44
+00:00:12,949 --> 00:00:12,949
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+45
+00:00:12,952 --> 00:00:12,952
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+46
+00:00:12,953 --> 00:00:12,953
+1. sale = getText().replaceAll("-", "")
+
+47
+00:00:13,022 --> 00:00:13,022
+5. sale = replaceAll("%", "").toInteger()
+
+48
+00:00:13,022 --> 00:00:13,022
+9. p_after = getText().replaceAll("\s", "")
+
+49
+00:00:13,098 --> 00:00:13,098
+13. p_before = replaceAll("\s", "").toInteger()
+
+50
+00:00:13,178 --> 00:00:13,178
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+51
+00:00:13,182 --> 00:00:13,183
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+52
+00:00:13,184 --> 00:00:13,184
+1. sale = getText().replaceAll("-", "")
+
+53
+00:00:13,381 --> 00:00:13,381
+5. sale = replaceAll("%", "").toInteger()
+
+54
+00:00:13,381 --> 00:00:13,381
+9. p_after = getText().replaceAll("\s", "")
+
+55
+00:00:13,450 --> 00:00:13,450
+13. p_before = replaceAll("\s", "").toInteger()
+
+56
+00:00:13,520 --> 00:00:13,520
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+57
+00:00:13,522 --> 00:00:13,522
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+58
+00:00:13,522 --> 00:00:13,523
+1. sale = getText().replaceAll("-", "")
+
+59
+00:00:13,587 --> 00:00:13,587
+5. sale = replaceAll("%", "").toInteger()
+
+60
+00:00:13,588 --> 00:00:13,588
+9. p_after = getText().replaceAll("\s", "")
+
+61
+00:00:13,663 --> 00:00:13,664
+13. p_before = replaceAll("\s", "").toInteger()
+
+62
+00:00:13,735 --> 00:00:13,736
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+63
+00:00:13,738 --> 00:00:13,738
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+64
+00:00:13,739 --> 00:00:13,739
+1. sale = getText().replaceAll("-", "")
+
+65
+00:00:13,803 --> 00:00:13,803
+5. sale = replaceAll("%", "").toInteger()
+
+66
+00:00:13,804 --> 00:00:13,804
+9. p_after = getText().replaceAll("\s", "")
+
+67
+00:00:13,873 --> 00:00:13,873
+13. p_before = replaceAll("\s", "").toInteger()
+
+68
+00:00:13,943 --> 00:00:13,944
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+69
+00:00:13,946 --> 00:00:13,946
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+70
+00:00:13,947 --> 00:00:13,947
+1. sale = getText().replaceAll("-", "")
+
+71
+00:00:14,016 --> 00:00:14,017
+5. sale = replaceAll("%", "").toInteger()
+
+72
+00:00:14,017 --> 00:00:14,018
+9. p_after = getText().replaceAll("\s", "")
+
+73
+00:00:14,095 --> 00:00:14,096
+13. p_before = replaceAll("\s", "").toInteger()
+
+74
+00:00:14,167 --> 00:00:14,167
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+75
+00:00:14,170 --> 00:00:14,170
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+76
+00:00:14,170 --> 00:00:14,170
+1. sale = getText().replaceAll("-", "")
+
+77
+00:00:14,259 --> 00:00:14,259
+5. sale = replaceAll("%", "").toInteger()
+
+78
+00:00:14,260 --> 00:00:14,260
+9. p_after = getText().replaceAll("\s", "")
+
+79
+00:00:14,333 --> 00:00:14,334
+13. p_before = replaceAll("\s", "").toInteger()
+
+80
+00:00:14,419 --> 00:00:14,420
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+81
+00:00:14,423 --> 00:00:14,424
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+82
+00:00:14,424 --> 00:00:14,424
+1. sale = getText().replaceAll("-", "")
+
+83
+00:00:14,490 --> 00:00:14,490
+5. sale = replaceAll("%", "").toInteger()
+
+84
+00:00:14,490 --> 00:00:14,490
+9. p_after = getText().replaceAll("\s", "")
+
+85
+00:00:14,563 --> 00:00:14,563
+13. p_before = replaceAll("\s", "").toInteger()
+
+86
+00:00:14,632 --> 00:00:14,632
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+87
+00:00:14,635 --> 00:00:14,635
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+88
+00:00:14,635 --> 00:00:14,636
+1. sale = getText().replaceAll("-", "")
+
+89
+00:00:14,715 --> 00:00:14,716
+5. sale = replaceAll("%", "").toInteger()
+
+90
+00:00:14,716 --> 00:00:14,717
+9. p_after = getText().replaceAll("\s", "")
+
+91
+00:00:14,803 --> 00:00:14,803
+13. p_before = replaceAll("\s", "").toInteger()
+
+92
+00:00:14,870 --> 00:00:14,870
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+93
+00:00:14,872 --> 00:00:14,872
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+94
+00:00:14,873 --> 00:00:14,873
+1. sale = getText().replaceAll("-", "")
+
+95
+00:00:14,948 --> 00:00:14,948
+5. sale = replaceAll("%", "").toInteger()
+
+96
+00:00:14,949 --> 00:00:14,949
+9. p_after = getText().replaceAll("\s", "")
+
+97
+00:00:15,023 --> 00:00:15,023
+13. p_before = replaceAll("\s", "").toInteger()
+
+98
+00:00:15,107 --> 00:00:15,108
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+99
+00:00:15,111 --> 00:00:15,111
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+100
+00:00:15,111 --> 00:00:15,112
+1. sale = getText().replaceAll("-", "")
+
+101
+00:00:15,204 --> 00:00:15,204
+5. sale = replaceAll("%", "").toInteger()
+
+102
+00:00:15,205 --> 00:00:15,205
+9. p_after = getText().replaceAll("\s", "")
+
+103
+00:00:15,276 --> 00:00:15,276
+13. p_before = replaceAll("\s", "").toInteger()
+
+104
+00:00:15,348 --> 00:00:15,348
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+105
+00:00:15,351 --> 00:00:15,351
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+106
+00:00:15,351 --> 00:00:15,351
+1. sale = getText().replaceAll("-", "")
+
+107
+00:00:15,414 --> 00:00:15,415
+5. sale = replaceAll("%", "").toInteger()
+
+108
+00:00:15,415 --> 00:00:15,415
+9. p_after = getText().replaceAll("\s", "")
+
+109
+00:00:15,481 --> 00:00:15,481
+13. p_before = replaceAll("\s", "").toInteger()
+
+110
+00:00:15,578 --> 00:00:15,579
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+111
+00:00:15,583 --> 00:00:15,583
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+112
+00:00:15,584 --> 00:00:15,584
+1. sale = getText().replaceAll("-", "")
+
+113
+00:00:15,671 --> 00:00:15,672
+5. sale = replaceAll("%", "").toInteger()
+
+114
+00:00:15,672 --> 00:00:15,672
+9. p_after = getText().replaceAll("\s", "")
+
+115
+00:00:15,745 --> 00:00:15,745
+13. p_before = replaceAll("\s", "").toInteger()
+
+116
+00:00:15,820 --> 00:00:15,820
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+117
+00:00:15,823 --> 00:00:15,824
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+118
+00:00:15,824 --> 00:00:15,824
+1. sale = getText().replaceAll("-", "")
+
+119
+00:00:15,909 --> 00:00:15,909
+5. sale = replaceAll("%", "").toInteger()
+
+120
+00:00:15,909 --> 00:00:15,909
+9. p_after = getText().replaceAll("\s", "")
+
+121
+00:00:16,000 --> 00:00:16,001
+13. p_before = replaceAll("\s", "").toInteger()
+
+122
+00:00:16,079 --> 00:00:16,080
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+123
+00:00:16,083 --> 00:00:16,083
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+124
+00:00:16,083 --> 00:00:16,084
+1. sale = getText().replaceAll("-", "")
+
+125
+00:00:16,171 --> 00:00:16,171
+5. sale = replaceAll("%", "").toInteger()
+
+126
+00:00:16,172 --> 00:00:16,172
+9. p_after = getText().replaceAll("\s", "")
+
+127
+00:00:16,254 --> 00:00:16,255
+13. p_before = replaceAll("\s", "").toInteger()
+
+128
+00:00:16,319 --> 00:00:16,319
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+129
+00:00:16,322 --> 00:00:16,322
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+130
+00:00:16,322 --> 00:00:16,322
+1. sale = getText().replaceAll("-", "")
+
+131
+00:00:16,393 --> 00:00:16,393
+5. sale = replaceAll("%", "").toInteger()
+
+132
+00:00:16,394 --> 00:00:16,394
+9. p_after = getText().replaceAll("\s", "")
+
+133
+00:00:16,459 --> 00:00:16,460
+13. p_before = replaceAll("\s", "").toInteger()
+
+134
+00:00:16,535 --> 00:00:16,535
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+135
+00:00:16,537 --> 00:00:16,537
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+136
+00:00:16,538 --> 00:00:16,538
+1. sale = getText().replaceAll("-", "")
+
+137
+00:00:16,609 --> 00:00:16,609
+5. sale = replaceAll("%", "").toInteger()
+
+138
+00:00:16,610 --> 00:00:16,610
+9. p_after = getText().replaceAll("\s", "")
+
+139
+00:00:16,680 --> 00:00:16,680
+13. p_before = replaceAll("\s", "").toInteger()
+
+140
+00:00:16,745 --> 00:00:16,745
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+141
+00:00:16,747 --> 00:00:16,747
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+142
+00:00:16,747 --> 00:00:16,747
+1. sale = getText().replaceAll("-", "")
+
+143
+00:00:16,825 --> 00:00:16,825
+5. sale = replaceAll("%", "").toInteger()
+
+144
+00:00:16,825 --> 00:00:16,826
+9. p_after = getText().replaceAll("\s", "")
+
+145
+00:00:16,908 --> 00:00:16,909
+13. p_before = replaceAll("\s", "").toInteger()
+
+146
+00:00:16,991 --> 00:00:16,991
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+147
+00:00:16,993 --> 00:00:16,993
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+148
+00:00:16,994 --> 00:00:16,994
+1. sale = getText().replaceAll("-", "")
+
+149
+00:00:17,091 --> 00:00:17,092
+5. sale = replaceAll("%", "").toInteger()
+
+150
+00:00:17,092 --> 00:00:17,092
+9. p_after = getText().replaceAll("\s", "")
+
+151
+00:00:17,188 --> 00:00:17,188
+13. p_before = replaceAll("\s", "").toInteger()
+
+152
+00:00:17,260 --> 00:00:17,260
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+153
+00:00:17,262 --> 00:00:17,262
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+154
+00:00:17,262 --> 00:00:17,263
+1. sale = getText().replaceAll("-", "")
+
+155
+00:00:17,326 --> 00:00:17,326
+5. sale = replaceAll("%", "").toInteger()
+
+156
+00:00:17,326 --> 00:00:17,326
+9. p_after = getText().replaceAll("\s", "")
+
+157
+00:00:17,402 --> 00:00:17,402
+13. p_before = replaceAll("\s", "").toInteger()
+
+158
+00:00:17,471 --> 00:00:17,471
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+159
+00:00:17,473 --> 00:00:17,473
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+160
+00:00:17,473 --> 00:00:17,473
+1. sale = getText().replaceAll("-", "")
+
+161
+00:00:17,547 --> 00:00:17,548
+5. sale = replaceAll("%", "").toInteger()
+
+162
+00:00:17,548 --> 00:00:17,549
+9. p_after = getText().replaceAll("\s", "")
+
+163
+00:00:17,625 --> 00:00:17,625
+13. p_before = replaceAll("\s", "").toInteger()
+
+164
+00:00:17,714 --> 00:00:17,715
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+165
+00:00:17,718 --> 00:00:17,718
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+166
+00:00:17,718 --> 00:00:17,718
+1. sale = getText().replaceAll("-", "")
+
+167
+00:00:17,798 --> 00:00:17,799
+5. sale = replaceAll("%", "").toInteger()
+
+168
+00:00:17,799 --> 00:00:17,799
+9. p_after = getText().replaceAll("\s", "")
+
+169
+00:00:17,867 --> 00:00:17,867
+13. p_before = replaceAll("\s", "").toInteger()
+
+170
+00:00:17,947 --> 00:00:17,948
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+171
+00:00:17,952 --> 00:00:17,952
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+172
+00:00:17,953 --> 00:00:17,953
+1. sale = getText().replaceAll("-", "")
+
+173
+00:00:18,049 --> 00:00:18,049
+5. sale = replaceAll("%", "").toInteger()
+
+174
+00:00:18,049 --> 00:00:18,050
+9. p_after = getText().replaceAll("\s", "")
+
+175
+00:00:18,138 --> 00:00:18,138
+13. p_before = replaceAll("\s", "").toInteger()
+
+176
+00:00:18,250 --> 00:00:18,251
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+177
+00:00:18,255 --> 00:00:18,255
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+178
+00:00:18,256 --> 00:00:18,256
+1. sale = getText().replaceAll("-", "")
+
+179
+00:00:18,346 --> 00:00:18,346
+5. sale = replaceAll("%", "").toInteger()
+
+180
+00:00:18,347 --> 00:00:18,347
+9. p_after = getText().replaceAll("\s", "")
+
+181
+00:00:18,430 --> 00:00:18,430
+13. p_before = replaceAll("\s", "").toInteger()
+
+182
+00:00:18,507 --> 00:00:18,508
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+183
+00:00:18,510 --> 00:00:18,510
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+184
+00:00:18,510 --> 00:00:18,511
+1. sale = getText().replaceAll("-", "")
+
+185
+00:00:18,595 --> 00:00:18,595
+5. sale = replaceAll("%", "").toInteger()
+
+186
+00:00:18,595 --> 00:00:18,596
+9. p_after = getText().replaceAll("\s", "")
+
+187
+00:00:18,686 --> 00:00:18,686
+13. p_before = replaceAll("\s", "").toInteger()
+
+188
+00:00:18,765 --> 00:00:18,766
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+189
+00:00:18,768 --> 00:00:18,768
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+190
+00:00:18,768 --> 00:00:18,769
+1. sale = getText().replaceAll("-", "")
+
+191
+00:00:18,849 --> 00:00:18,850
+5. sale = replaceAll("%", "").toInteger()
+
+192
+00:00:18,851 --> 00:00:18,851
+9. p_after = getText().replaceAll("\s", "")
+
+193
+00:00:18,926 --> 00:00:18,926
+13. p_before = replaceAll("\s", "").toInteger()
+
+194
+00:00:19,008 --> 00:00:19,008
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+195
+00:00:19,011 --> 00:00:19,012
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+196
+00:00:19,012 --> 00:00:19,012
+1. sale = getText().replaceAll("-", "")
+
+197
+00:00:19,115 --> 00:00:19,115
+5. sale = replaceAll("%", "").toInteger()
+
+198
+00:00:19,116 --> 00:00:19,116
+9. p_after = getText().replaceAll("\s", "")
+
+199
+00:00:19,185 --> 00:00:19,185
+13. p_before = replaceAll("\s", "").toInteger()
+
+200
+00:00:19,258 --> 00:00:19,259
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+201
+00:00:19,261 --> 00:00:19,261
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+202
+00:00:19,261 --> 00:00:19,261
+1. sale = getText().replaceAll("-", "")
+
+203
+00:00:19,331 --> 00:00:19,331
+5. sale = replaceAll("%", "").toInteger()
+
+204
+00:00:19,332 --> 00:00:19,332
+9. p_after = getText().replaceAll("\s", "")
+
+205
+00:00:19,427 --> 00:00:19,428
+13. p_before = replaceAll("\s", "").toInteger()
+
+206
+00:00:19,524 --> 00:00:19,524
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+207
+00:00:19,526 --> 00:00:19,526
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+208
+00:00:19,527 --> 00:00:19,527
+1. sale = getText().replaceAll("-", "")
+
+209
+00:00:19,597 --> 00:00:19,597
+5. sale = replaceAll("%", "").toInteger()
+
+210
+00:00:19,598 --> 00:00:19,598
+9. p_after = getText().replaceAll("\s", "")
+
+211
+00:00:19,669 --> 00:00:19,669
+13. p_before = replaceAll("\s", "").toInteger()
+
+212
+00:00:19,735 --> 00:00:19,736
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+213
+00:00:19,738 --> 00:00:19,738
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+214
+00:00:19,738 --> 00:00:19,738
+1. sale = getText().replaceAll("-", "")
+
+215
+00:00:19,807 --> 00:00:19,808
+5. sale = replaceAll("%", "").toInteger()
+
+216
+00:00:19,808 --> 00:00:19,808
+9. p_after = getText().replaceAll("\s", "")
+
+217
+00:00:19,877 --> 00:00:19,877
+13. p_before = replaceAll("\s", "").toInteger()
+
+218
+00:00:19,954 --> 00:00:19,955
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+219
+00:00:19,957 --> 00:00:19,957
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+220
+00:00:19,957 --> 00:00:19,957
+1. sale = getText().replaceAll("-", "")
+
+221
+00:00:20,025 --> 00:00:20,026
+5. sale = replaceAll("%", "").toInteger()
+
+222
+00:00:20,026 --> 00:00:20,026
+9. p_after = getText().replaceAll("\s", "")
+
+223
+00:00:20,104 --> 00:00:20,104
+13. p_before = replaceAll("\s", "").toInteger()
+
+224
+00:00:20,183 --> 00:00:20,184
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+225
+00:00:20,186 --> 00:00:20,186
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+226
+00:00:20,186 --> 00:00:20,187
+1. sale = getText().replaceAll("-", "")
+
+227
+00:00:20,258 --> 00:00:20,258
+5. sale = replaceAll("%", "").toInteger()
+
+228
+00:00:20,259 --> 00:00:20,259
+9. p_after = getText().replaceAll("\s", "")
+
+229
+00:00:20,342 --> 00:00:20,342
+13. p_before = replaceAll("\s", "").toInteger()
+
+230
+00:00:20,417 --> 00:00:20,418
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+231
+00:00:20,420 --> 00:00:20,420
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+232
+00:00:20,420 --> 00:00:20,420
+1. sale = getText().replaceAll("-", "")
+
+233
+00:00:20,502 --> 00:00:20,502
+5. sale = replaceAll("%", "").toInteger()
+
+234
+00:00:20,503 --> 00:00:20,503
+9. p_after = getText().replaceAll("\s", "")
+
+235
+00:00:20,604 --> 00:00:20,604
+13. p_before = replaceAll("\s", "").toInteger()
+
+236
+00:00:20,706 --> 00:00:20,706
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+237
+00:00:20,709 --> 00:00:20,710
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+238
+00:00:20,710 --> 00:00:20,710
+1. sale = getText().replaceAll("-", "")
+
+239
+00:00:20,780 --> 00:00:20,781
+5. sale = replaceAll("%", "").toInteger()
+
+240
+00:00:20,781 --> 00:00:20,782
+9. p_after = getText().replaceAll("\s", "")
+
+241
+00:00:20,857 --> 00:00:20,857
+13. p_before = replaceAll("\s", "").toInteger()
+
+242
+00:00:20,925 --> 00:00:20,925
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+243
+00:00:20,927 --> 00:00:20,927
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+244
+00:00:20,927 --> 00:00:20,927
+1. sale = getText().replaceAll("-", "")
+
+245
+00:00:20,997 --> 00:00:20,997
+5. sale = replaceAll("%", "").toInteger()
+
+246
+00:00:20,997 --> 00:00:20,998
+9. p_after = getText().replaceAll("\s", "")
+
+247
+00:00:21,073 --> 00:00:21,073
+13. p_before = replaceAll("\s", "").toInteger()
+
+248
+00:00:21,155 --> 00:00:21,156
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+249
+00:00:21,158 --> 00:00:21,158
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+250
+00:00:21,158 --> 00:00:21,158
+1. sale = getText().replaceAll("-", "")
+
+251
+00:00:21,230 --> 00:00:21,230
+5. sale = replaceAll("%", "").toInteger()
+
+252
+00:00:21,230 --> 00:00:21,231
+9. p_after = getText().replaceAll("\s", "")
+
+253
+00:00:21,297 --> 00:00:21,297
+13. p_before = replaceAll("\s", "").toInteger()
+
+254
+00:00:21,370 --> 00:00:21,370
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+255
+00:00:21,372 --> 00:00:21,372
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+256
+00:00:21,372 --> 00:00:21,372
+1. sale = getText().replaceAll("-", "")
+
+257
+00:00:21,448 --> 00:00:21,448
+5. sale = replaceAll("%", "").toInteger()
+
+258
+00:00:21,448 --> 00:00:21,449
+9. p_after = getText().replaceAll("\s", "")
+
+259
+00:00:21,541 --> 00:00:21,541
+13. p_before = replaceAll("\s", "").toInteger()
+
+260
+00:00:21,611 --> 00:00:21,611
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+261
+00:00:21,612 --> 00:00:21,612
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+262
+00:00:21,612 --> 00:00:21,612
+1. sale = getText().replaceAll("-", "")
+
+263
+00:00:21,679 --> 00:00:21,680
+5. sale = replaceAll("%", "").toInteger()
+
+264
+00:00:21,680 --> 00:00:21,681
+9. p_after = getText().replaceAll("\s", "")
+
+265
+00:00:21,767 --> 00:00:21,767
+13. p_before = replaceAll("\s", "").toInteger()
+
+266
+00:00:21,836 --> 00:00:21,836
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+267
+00:00:21,838 --> 00:00:21,838
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+268
+00:00:21,839 --> 00:00:21,839
+1. sale = getText().replaceAll("-", "")
+
+269
+00:00:21,917 --> 00:00:21,917
+5. sale = replaceAll("%", "").toInteger()
+
+270
+00:00:21,918 --> 00:00:21,918
+9. p_after = getText().replaceAll("\s", "")
+
+271
+00:00:21,993 --> 00:00:21,993
+13. p_before = replaceAll("\s", "").toInteger()
+
+272
+00:00:22,072 --> 00:00:22,072
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+273
+00:00:22,074 --> 00:00:22,074
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+274
+00:00:22,075 --> 00:00:22,075
+1. sale = getText().replaceAll("-", "")
+
+275
+00:00:22,149 --> 00:00:22,149
+5. sale = replaceAll("%", "").toInteger()
+
+276
+00:00:22,150 --> 00:00:22,150
+9. p_after = getText().replaceAll("\s", "")
+
+277
+00:00:22,236 --> 00:00:22,237
+13. p_before = replaceAll("\s", "").toInteger()
+
+278
+00:00:22,309 --> 00:00:22,309
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+279
+00:00:22,311 --> 00:00:22,311
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+280
+00:00:22,312 --> 00:00:22,312
+1. sale = getText().replaceAll("-", "")
+
+281
+00:00:22,385 --> 00:00:22,385
+5. sale = replaceAll("%", "").toInteger()
+
+282
+00:00:22,387 --> 00:00:22,387
+9. p_after = getText().replaceAll("\s", "")
+
+283
+00:00:22,478 --> 00:00:22,478
+13. p_before = replaceAll("\s", "").toInteger()
+
+284
+00:00:22,547 --> 00:00:22,547
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+285
+00:00:22,549 --> 00:00:22,549
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+286
+00:00:22,550 --> 00:00:22,550
+1. sale = getText().replaceAll("-", "")
+
+287
+00:00:22,623 --> 00:00:22,623
+5. sale = replaceAll("%", "").toInteger()
+
+288
+00:00:22,623 --> 00:00:22,623
+9. p_after = getText().replaceAll("\s", "")
+
+289
+00:00:22,705 --> 00:00:22,705
+13. p_before = replaceAll("\s", "").toInteger()
+
+290
+00:00:22,780 --> 00:00:22,781
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+291
+00:00:22,784 --> 00:00:22,784
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+292
+00:00:22,785 --> 00:00:22,785
+1. sale = getText().replaceAll("-", "")
+
+293
+00:00:22,858 --> 00:00:22,858
+5. sale = replaceAll("%", "").toInteger()
+
+294
+00:00:22,858 --> 00:00:22,858
+9. p_after = getText().replaceAll("\s", "")
+
+295
+00:00:22,937 --> 00:00:22,938
+13. p_before = replaceAll("\s", "").toInteger()
+
+296
+00:00:23,023 --> 00:00:23,024
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+297
+00:00:23,026 --> 00:00:23,026
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+298
+00:00:23,027 --> 00:00:23,027
+1. sale = getText().replaceAll("-", "")
+
+299
+00:00:23,112 --> 00:00:23,113
+5. sale = replaceAll("%", "").toInteger()
+
+300
+00:00:23,113 --> 00:00:23,113
+9. p_after = getText().replaceAll("\s", "")
+
+301
+00:00:23,206 --> 00:00:23,206
+13. p_before = replaceAll("\s", "").toInteger()
+
+302
+00:00:23,397 --> 00:00:23,397
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+303
+00:00:23,400 --> 00:00:23,400
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+304
+00:00:23,400 --> 00:00:23,400
+1. sale = getText().replaceAll("-", "")
+
+305
+00:00:23,468 --> 00:00:23,468
+5. sale = replaceAll("%", "").toInteger()
+
+306
+00:00:23,468 --> 00:00:23,469
+9. p_after = getText().replaceAll("\s", "")
+
+307
+00:00:23,535 --> 00:00:23,535
+13. p_before = replaceAll("\s", "").toInteger()
+
+308
+00:00:23,606 --> 00:00:23,607
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+309
+00:00:23,609 --> 00:00:23,609
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+310
+00:00:23,609 --> 00:00:23,609
+1. sale = getText().replaceAll("-", "")
+
+311
+00:00:23,692 --> 00:00:23,692
+5. sale = replaceAll("%", "").toInteger()
+
+312
+00:00:23,692 --> 00:00:23,693
+9. p_after = getText().replaceAll("\s", "")
+
+313
+00:00:23,769 --> 00:00:23,769
+13. p_before = replaceAll("\s", "").toInteger()
+
+314
+00:00:23,844 --> 00:00:23,844
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+315
+00:00:23,847 --> 00:00:23,847
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+316
+00:00:23,848 --> 00:00:23,849
+1. sale = getText().replaceAll("-", "")
+
+317
+00:00:23,920 --> 00:00:23,920
+5. sale = replaceAll("%", "").toInteger()
+
+318
+00:00:23,920 --> 00:00:23,921
+9. p_after = getText().replaceAll("\s", "")
+
+319
+00:00:23,999 --> 00:00:23,999
+13. p_before = replaceAll("\s", "").toInteger()
+
+320
+00:00:24,069 --> 00:00:24,070
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+321
+00:00:24,071 --> 00:00:24,071
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+322
+00:00:24,072 --> 00:00:24,072
+1. sale = getText().replaceAll("-", "")
+
+323
+00:00:24,142 --> 00:00:24,142
+5. sale = replaceAll("%", "").toInteger()
+
+324
+00:00:24,142 --> 00:00:24,142
+9. p_after = getText().replaceAll("\s", "")
+
+325
+00:00:24,228 --> 00:00:24,228
+13. p_before = replaceAll("\s", "").toInteger()
+
+326
+00:00:24,313 --> 00:00:24,313
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+327
+00:01:00,677 --> 00:01:00,678
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+328
+00:01:00,678 --> 00:01:00,678
+1. sale = getText().replaceAll("-", "")
+
+329
+00:01:00,762 --> 00:01:00,762
+5. sale = replaceAll("%", "").toInteger()
+
+330
+00:01:00,763 --> 00:01:00,763
+9. p_after = getText().replaceAll("\s", "")
+
+331
+00:01:00,871 --> 00:01:00,871
+13. p_before = replaceAll("\s", "").toInteger()
+
+332
+00:01:00,965 --> 00:01:00,966
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+333
+00:01:00,968 --> 00:01:00,968
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+334
+00:01:00,968 --> 00:01:00,968
+1. sale = getText().replaceAll("-", "")
+
+335
+00:01:01,046 --> 00:01:01,046
+5. sale = replaceAll("%", "").toInteger()
+
+336
+00:01:01,047 --> 00:01:01,047
+9. p_after = getText().replaceAll("\s", "")
+
+337
+00:01:01,120 --> 00:01:01,120
+13. p_before = replaceAll("\s", "").toInteger()
+
+338
+00:01:01,208 --> 00:01:01,209
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+339
+00:01:01,214 --> 00:01:01,214
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+340
+00:01:01,214 --> 00:01:01,215
+1. sale = getText().replaceAll("-", "")
+
+341
+00:01:01,397 --> 00:01:01,397
+5. sale = replaceAll("%", "").toInteger()
+
+342
+00:01:01,398 --> 00:01:01,398
+9. p_after = getText().replaceAll("\s", "")
+
+343
+00:01:01,473 --> 00:01:01,473
+13. p_before = replaceAll("\s", "").toInteger()
+
+344
+00:01:01,541 --> 00:01:01,542
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+345
+00:01:01,544 --> 00:01:01,544
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+346
+00:01:01,544 --> 00:01:01,545
+1. sale = getText().replaceAll("-", "")
+
+347
+00:01:01,615 --> 00:01:01,616
+5. sale = replaceAll("%", "").toInteger()
+
+348
+00:01:01,616 --> 00:01:01,616
+9. p_after = getText().replaceAll("\s", "")
+
+349
+00:01:01,690 --> 00:01:01,690
+13. p_before = replaceAll("\s", "").toInteger()
+
+350
+00:01:01,761 --> 00:01:01,761
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+351
+00:01:01,764 --> 00:01:01,764
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+352
+00:01:01,765 --> 00:01:01,765
+1. sale = getText().replaceAll("-", "")
+
+353
+00:01:01,831 --> 00:01:01,831
+5. sale = replaceAll("%", "").toInteger()
+
+354
+00:01:01,831 --> 00:01:01,831
+9. p_after = getText().replaceAll("\s", "")
+
+355
+00:01:01,909 --> 00:01:01,909
+13. p_before = replaceAll("\s", "").toInteger()
+
+356
+00:01:01,978 --> 00:01:01,978
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+357
+00:01:01,981 --> 00:01:01,981
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+358
+00:01:01,982 --> 00:01:01,982
+1. sale = getText().replaceAll("-", "")
+
+359
+00:01:02,058 --> 00:01:02,058
+5. sale = replaceAll("%", "").toInteger()
+
+360
+00:01:02,058 --> 00:01:02,058
+9. p_after = getText().replaceAll("\s", "")
+
+361
+00:01:02,138 --> 00:01:02,139
+13. p_before = replaceAll("\s", "").toInteger()
+
+362
+00:01:02,222 --> 00:01:02,222
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+363
+00:01:02,225 --> 00:01:02,225
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+364
+00:01:02,225 --> 00:01:02,225
+1. sale = getText().replaceAll("-", "")
+
+365
+00:01:02,300 --> 00:01:02,300
+5. sale = replaceAll("%", "").toInteger()
+
+366
+00:01:02,301 --> 00:01:02,301
+9. p_after = getText().replaceAll("\s", "")
+
+367
+00:01:02,373 --> 00:01:02,373
+13. p_before = replaceAll("\s", "").toInteger()
+
+368
+00:01:02,443 --> 00:01:02,443
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+369
+00:01:02,446 --> 00:01:02,446
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+370
+00:01:02,447 --> 00:01:02,447
+1. sale = getText().replaceAll("-", "")
+
+371
+00:01:02,517 --> 00:01:02,517
+5. sale = replaceAll("%", "").toInteger()
+
+372
+00:01:02,517 --> 00:01:02,517
+9. p_after = getText().replaceAll("\s", "")
+
+373
+00:01:02,594 --> 00:01:02,594
+13. p_before = replaceAll("\s", "").toInteger()
+
+374
+00:01:02,667 --> 00:01:02,667
+17. if (!(verifyMatch(round(p_before * 1 - sale / 100).toString(), p_after, false)))
+
+375
+00:01:02,668 --> 00:01:02,669
+1. markFailed("ERROR: The Actual Price Does NOT Match the Expected Price")
+
+376
+00:01:02,669 --> 00:01:02,669
+25. if (waitForElementVisible(findTestObject("SalePage/btn_next"), 10))
+
+377
+00:01:02,776 --> 00:01:02,777
+1. click(findTestObject("SalePage/btn_next"))
+
+378
+00:01:06,286 --> 00:01:06,286
+63. Закрытие браузера
+

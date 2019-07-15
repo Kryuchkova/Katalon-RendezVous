@@ -16,6 +16,7 @@ import org.openqa.selenium.By as By
 import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 'Открытие браузера'
 WebUI.openBrowser('https://www.rendez-vous.ru/')
@@ -82,5 +83,6 @@ for (i = 0; i < Shops.size(); i++) {
 WebUI.click(findTestObject('CheckoutPage/btn_payment'))
 
 'Кнопка оформить заказ доступна для нажатия'
-WebUI.verifyElementClickable(findTestObject('CheckoutPage/btn_order_confirm'))
-
+if (!WebUI.verifyElementClickable(findTestObject('CheckoutPage/btn_order_confirm'))){
+	KeywordUtil.markFailed('ERROR: The Button "Оформить" Does NOT CLICKABLE')
+}

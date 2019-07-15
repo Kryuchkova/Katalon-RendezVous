@@ -13,6 +13,7 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.WebElement as WebElement
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 'Открытие браузера'
 WebUI.openBrowser('https://www.rendez-vous.ru/')
@@ -72,9 +73,15 @@ for (i = 0; i < Prices.size(); i++) {
 	name = Names.get(i).getText().toUpperCase().split(" ")
 	price = Prices.get(i).getText().replaceAll('\\s','').toInteger()
 	
-	WebUI.verifyMatch(name[0], Filters.get(0).getText().toUpperCase(), false)
-	WebUI.verifyGreaterThanOrEqual(t_price, price)
-	WebUI.verifyLessThanOrEqual(f_price, price)
+	if (!WebUI.verifyMatch(name[0], Filters.get(0).getText().toUpperCase(), false)){
+		KeywordUtil.markFailed('ERROR: The Actual Type Does NOT MATCH the Expected Type')
+	}
+	if (!WebUI.verifyGreaterThanOrEqual(t_price, price)){
+		KeywordUtil.markFailed('ERROR: The Actual Price Does NOT LESS THAN Or EQUAL the Upper Price Limit')
+	}
+	if (!WebUI.verifyLessThanOrEqual(f_price, price)){
+		KeywordUtil.markFailed('ERROR: The Actual Price Does NOT GREATER THAN Or EQUAL the Lower Price Limit')
+	}	
 }
 
 

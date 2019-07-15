@@ -15,6 +15,7 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.By as By
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 'Открытие браузера'
 WebUI.openBrowser('https://www.rendez-vous.ru/')
@@ -41,7 +42,6 @@ num_pages = WebUI.getText(findTestObject('SalePage/num_pages')).toInteger()
 
 'Сбор всех цен и скидок в массив'
 List<WebElement> Prices = []
-
 List<WebElement> Sales = []
 
 for (i = 0; i < num_pages; i++) {
@@ -63,8 +63,11 @@ for (i = 0; i < num_pages; i++) {
         p_after = Prices.get(i * 2).getText().replaceAll('\\s', '')
 
         p_before = Prices.get((i * 2) + 1).getText().replaceAll('\\s', '').toInteger()
-
-        WebUI.verifyMatch(Math.round(p_before * (1 - (sale / 100))).toString(), p_after, false)
+		
+		if (!WebUI.verifyMatch(Math.round(p_before * (1 - (sale / 100))).toString(), p_after, false)){
+			KeywordUtil.markFailed('ERROR: The Actual Price Does NOT Match the Expected Price')
+			break
+		}
     }
     
     if (WebUI.waitForElementVisible(findTestObject('SalePage/btn_next'), 10)) {

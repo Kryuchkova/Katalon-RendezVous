@@ -12,6 +12,7 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 'Открытие браузера'
 WebUI.openBrowser('https://www.rendez-vous.ru/')
@@ -52,5 +53,6 @@ while (i < 6) {
 }
 
 'Кнопка "Оформить заказ" недоступна'
-WebUI.verifyElementNotClickable(findTestObject('CartPage/btn_checkout'))
-
+if (!WebUI.verifyElementNotClickable(findTestObject('CartPage/btn_checkout'))){
+	KeywordUtil.markFailed('ERROR: The Button "Оформить" Does NOT CLICKABLE')
+}

@@ -12,6 +12,7 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 'Открытие браузера'
 WebUI.openBrowser('https://www.rendez-vous.ru/')
@@ -78,11 +79,16 @@ check_old_price = WebUI.getText(findTestObject('CartPage/lbl_check_old_price')).
 check_sale = WebUI.getText(findTestObject('CartPage/lbl_check_sale_amount')).replaceAll('\\s', '')
 
 'Сравнение итоговой стоимости товара и его цены'
-WebUI.verifyMatch(check_new_price, goods_new_price, false)
+if (!WebUI.verifyMatch(check_new_price, goods_new_price, false)){
+	KeywordUtil.markFailed('ERROR: The Actual Price Does NOT Match the Expected Price')
+}
 
 'Сравнение итоговой стоимости товара без скидки и его цены до скидки'
-WebUI.verifyMatch(check_old_price, goods_old_price, false)
+if (!WebUI.verifyMatch(check_old_price, goods_old_price, false)){
+	KeywordUtil.markFailed('ERROR: The Actual Total Cost Does NOT Match the Expected Total Cost')
+}
 
 'Сравнение скидок на товар в рублях'
-WebUI.verifyMatch((goods_old_price.toInteger() - Math.round(goods_old_price.toInteger() * (1 - goods_sale / 100))).toString(), check_sale, false)
-
+if (!WebUI.verifyMatch((goods_old_price.toInteger() - Math.round(goods_old_price.toInteger() * (1 - goods_sale / 100))).toString(), check_sale, false)){
+	KeywordUtil.markFailed('ERROR: The Actual Sale Does NOT Match the Expected Sale')
+}

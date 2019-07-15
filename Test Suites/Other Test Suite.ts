@@ -19,25 +19,25 @@
    <testCaseLink>
       <guid>c1216dce-0be2-48b9-b5f0-614e2663a8f8</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Electronic gift certificate issuance</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>082cad36-4543-4d34-b3af-a4f1e167836a</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Links to mobile apps and social networks</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>7867e4d4-9ab0-4f3e-9575-e9bbdf5c3519</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Order by one click</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>89c59934-73a6-4399-9b6e-a276b6515c22</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Region change</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

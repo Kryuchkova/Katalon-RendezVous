@@ -1,0 +1,1348 @@
+1
+00:00:00,376 --> 00:00:00,379
+3. Открытие браузера
+
+2
+00:00:08,210 --> 00:00:08,212
+9. Разворачивание окна браузера на всь экран
+
+3
+00:00:09,418 --> 00:00:09,420
+15. Добавление скриншотов и подсветки элементов
+
+4
+00:00:09,570 --> 00:00:09,573
+21. Нажатие на кнопку "Мужчинам"
+
+5
+00:00:11,923 --> 00:00:11,924
+27. Нажатие на кнопку "Акссессуары"
+
+6
+00:00:15,548 --> 00:00:15,549
+33. Выбор "тип"
+
+7
+00:00:16,453 --> 00:00:16,453
+39. Список "типов"
+
+8
+00:00:16,486 --> 00:00:16,487
+43. for ([i = 0, i < Types.size(), (i++)])
+
+9
+00:00:16,488 --> 00:00:16,489
+1. if (getText().indexOf("Кошелёк") != -1)
+
+10
+00:00:16,531 --> 00:00:16,532
+1. if (getText().indexOf("Кошелёк") != -1)
+
+11
+00:00:16,554 --> 00:00:16,556
+1. if (getText().indexOf("Кошелёк") != -1)
+
+12
+00:00:16,606 --> 00:00:16,608
+1. if (getText().indexOf("Кошелёк") != -1)
+
+13
+00:00:16,644 --> 00:00:16,644
+1. if (getText().indexOf("Кошелёк") != -1)
+
+14
+00:00:16,668 --> 00:00:16,669
+1. if (getText().indexOf("Кошелёк") != -1)
+
+15
+00:00:16,695 --> 00:00:16,696
+1. if (getText().indexOf("Кошелёк") != -1)
+
+16
+00:00:16,727 --> 00:00:16,728
+1. if (getText().indexOf("Кошелёк") != -1)
+
+17
+00:00:16,756 --> 00:00:16,758
+1. if (getText().indexOf("Кошелёк") != -1)
+
+18
+00:00:16,809 --> 00:00:16,811
+1. if (getText().indexOf("Кошелёк") != -1)
+
+19
+00:00:16,843 --> 00:00:16,844
+1. if (getText().indexOf("Кошелёк") != -1)
+
+20
+00:00:16,864 --> 00:00:16,865
+1. if (getText().indexOf("Кошелёк") != -1)
+
+21
+00:00:16,892 --> 00:00:16,893
+1. if (getText().indexOf("Кошелёк") != -1)
+
+22
+00:00:16,915 --> 00:00:16,917
+1. if (getText().indexOf("Кошелёк") != -1)
+
+23
+00:00:16,937 --> 00:00:16,937
+3. Выбор тип "Кошелёк"
+
+24
+00:00:17,378 --> 00:00:17,379
+7. break
+
+25
+00:00:17,380 --> 00:00:17,383
+49. Выбор ценового диапазона
+
+26
+00:00:18,198 --> 00:00:18,199
+55. Установка нижней границы
+
+27
+00:00:19,028 --> 00:00:19,028
+61. Установка верхней границы
+
+28
+00:00:19,781 --> 00:00:19,782
+67. Применение фильтров
+
+29
+00:00:23,307 --> 00:00:23,308
+71. delay(3)
+
+30
+00:00:26,324 --> 00:00:26,325
+79. Цены товаров
+
+31
+00:00:26,365 --> 00:00:26,366
+85. Названия
+
+32
+00:00:26,397 --> 00:00:26,398
+91. Фильтры
+
+33
+00:00:26,429 --> 00:00:26,430
+95. s = replaceAll("\s", "").split("-")
+
+34
+00:00:26,457 --> 00:00:26,458
+99. println(s)
+
+35
+00:00:26,461 --> 00:00:26,462
+103. f_price = s[0].toInteger()
+
+36
+00:00:26,471 --> 00:00:26,472
+107. t_price = s[1].toInteger()
+
+37
+00:00:26,472 --> 00:00:26,473
+113. Проверяем товары на соответствие фильтрам
+
+38
+00:00:26,473 --> 00:00:26,474
+1. name = toUpperCase().split(" ")
+
+39
+00:00:26,497 --> 00:00:26,497
+5. price = replaceAll("\s", "").toInteger()
+
+40
+00:00:26,522 --> 00:00:26,523
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+41
+00:00:26,554 --> 00:00:26,555
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+42
+00:00:26,563 --> 00:00:26,563
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+43
+00:00:26,572 --> 00:00:26,573
+1. name = toUpperCase().split(" ")
+
+44
+00:00:26,611 --> 00:00:26,613
+5. price = replaceAll("\s", "").toInteger()
+
+45
+00:00:26,645 --> 00:00:26,646
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+46
+00:00:26,663 --> 00:00:26,664
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+47
+00:00:26,667 --> 00:00:26,667
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+48
+00:00:26,669 --> 00:00:26,670
+1. name = toUpperCase().split(" ")
+
+49
+00:00:26,697 --> 00:00:26,698
+5. price = replaceAll("\s", "").toInteger()
+
+50
+00:00:26,728 --> 00:00:26,730
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+51
+00:00:26,751 --> 00:00:26,752
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+52
+00:00:26,754 --> 00:00:26,755
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+53
+00:00:26,758 --> 00:00:26,759
+1. name = toUpperCase().split(" ")
+
+54
+00:00:26,795 --> 00:00:26,796
+5. price = replaceAll("\s", "").toInteger()
+
+55
+00:00:26,835 --> 00:00:26,835
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+56
+00:00:26,854 --> 00:00:26,855
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+57
+00:00:26,857 --> 00:00:26,858
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+58
+00:00:26,860 --> 00:00:26,861
+1. name = toUpperCase().split(" ")
+
+59
+00:00:26,924 --> 00:00:26,925
+5. price = replaceAll("\s", "").toInteger()
+
+60
+00:00:26,947 --> 00:00:26,948
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+61
+00:00:26,960 --> 00:00:26,960
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+62
+00:00:26,962 --> 00:00:26,962
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+63
+00:00:26,964 --> 00:00:26,964
+1. name = toUpperCase().split(" ")
+
+64
+00:00:26,992 --> 00:00:26,993
+5. price = replaceAll("\s", "").toInteger()
+
+65
+00:00:27,019 --> 00:00:27,020
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+66
+00:00:27,037 --> 00:00:27,038
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+67
+00:00:27,040 --> 00:00:27,041
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+68
+00:00:27,043 --> 00:00:27,044
+1. name = toUpperCase().split(" ")
+
+69
+00:00:27,071 --> 00:00:27,072
+5. price = replaceAll("\s", "").toInteger()
+
+70
+00:00:27,113 --> 00:00:27,114
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+71
+00:00:27,132 --> 00:00:27,133
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+72
+00:00:27,135 --> 00:00:27,136
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+73
+00:00:27,137 --> 00:00:27,138
+1. name = toUpperCase().split(" ")
+
+74
+00:00:27,182 --> 00:00:27,184
+5. price = replaceAll("\s", "").toInteger()
+
+75
+00:00:27,220 --> 00:00:27,221
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+76
+00:00:27,250 --> 00:00:27,251
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+77
+00:00:27,254 --> 00:00:27,255
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+78
+00:00:27,259 --> 00:00:27,260
+1. name = toUpperCase().split(" ")
+
+79
+00:00:27,306 --> 00:00:27,307
+5. price = replaceAll("\s", "").toInteger()
+
+80
+00:00:27,344 --> 00:00:27,345
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+81
+00:00:27,392 --> 00:00:27,393
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+82
+00:00:27,396 --> 00:00:27,397
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+83
+00:00:27,401 --> 00:00:27,403
+1. name = toUpperCase().split(" ")
+
+84
+00:00:27,436 --> 00:00:27,437
+5. price = replaceAll("\s", "").toInteger()
+
+85
+00:00:27,509 --> 00:00:27,509
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+86
+00:00:27,525 --> 00:00:27,526
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+87
+00:00:27,530 --> 00:00:27,531
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+88
+00:00:27,535 --> 00:00:27,535
+1. name = toUpperCase().split(" ")
+
+89
+00:00:27,605 --> 00:00:27,606
+5. price = replaceAll("\s", "").toInteger()
+
+90
+00:00:27,648 --> 00:00:27,649
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+91
+00:00:27,664 --> 00:00:27,664
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+92
+00:00:27,667 --> 00:00:27,667
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+93
+00:00:27,671 --> 00:00:27,672
+1. name = toUpperCase().split(" ")
+
+94
+00:00:27,700 --> 00:00:27,701
+5. price = replaceAll("\s", "").toInteger()
+
+95
+00:00:27,723 --> 00:00:27,724
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+96
+00:00:27,759 --> 00:00:27,760
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+97
+00:00:27,763 --> 00:00:27,764
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+98
+00:00:27,767 --> 00:00:27,768
+1. name = toUpperCase().split(" ")
+
+99
+00:00:27,816 --> 00:00:27,818
+5. price = replaceAll("\s", "").toInteger()
+
+100
+00:00:27,850 --> 00:00:27,850
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+101
+00:00:27,945 --> 00:00:27,945
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+102
+00:00:27,948 --> 00:00:27,949
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+103
+00:00:27,951 --> 00:00:27,952
+1. name = toUpperCase().split(" ")
+
+104
+00:00:27,987 --> 00:00:27,988
+5. price = replaceAll("\s", "").toInteger()
+
+105
+00:00:28,020 --> 00:00:28,020
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+106
+00:00:28,037 --> 00:00:28,038
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+107
+00:00:28,041 --> 00:00:28,041
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+108
+00:00:28,044 --> 00:00:28,044
+1. name = toUpperCase().split(" ")
+
+109
+00:00:28,079 --> 00:00:28,080
+5. price = replaceAll("\s", "").toInteger()
+
+110
+00:00:28,113 --> 00:00:28,114
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+111
+00:00:28,132 --> 00:00:28,133
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+112
+00:00:28,135 --> 00:00:28,136
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+113
+00:00:28,138 --> 00:00:28,139
+1. name = toUpperCase().split(" ")
+
+114
+00:00:28,173 --> 00:00:28,174
+5. price = replaceAll("\s", "").toInteger()
+
+115
+00:00:28,213 --> 00:00:28,214
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+116
+00:00:28,236 --> 00:00:28,236
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+117
+00:00:28,240 --> 00:00:28,241
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+118
+00:00:28,246 --> 00:00:28,247
+1. name = toUpperCase().split(" ")
+
+119
+00:00:28,367 --> 00:00:28,368
+5. price = replaceAll("\s", "").toInteger()
+
+120
+00:00:28,521 --> 00:00:28,522
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+121
+00:00:28,546 --> 00:00:28,547
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+122
+00:00:28,548 --> 00:00:28,548
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+123
+00:00:28,550 --> 00:00:28,550
+1. name = toUpperCase().split(" ")
+
+124
+00:00:28,573 --> 00:00:28,574
+5. price = replaceAll("\s", "").toInteger()
+
+125
+00:00:28,606 --> 00:00:28,607
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+126
+00:00:28,621 --> 00:00:28,621
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+127
+00:00:28,622 --> 00:00:28,623
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+128
+00:00:28,624 --> 00:00:28,624
+1. name = toUpperCase().split(" ")
+
+129
+00:00:28,650 --> 00:00:28,650
+5. price = replaceAll("\s", "").toInteger()
+
+130
+00:00:28,686 --> 00:00:28,687
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+131
+00:00:28,704 --> 00:00:28,704
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+132
+00:00:28,706 --> 00:00:28,706
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+133
+00:00:28,708 --> 00:00:28,709
+1. name = toUpperCase().split(" ")
+
+134
+00:00:28,736 --> 00:00:28,737
+5. price = replaceAll("\s", "").toInteger()
+
+135
+00:00:28,763 --> 00:00:28,763
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+136
+00:00:28,795 --> 00:00:28,796
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+137
+00:00:28,799 --> 00:00:28,799
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+138
+00:00:28,800 --> 00:00:28,801
+1. name = toUpperCase().split(" ")
+
+139
+00:00:28,846 --> 00:00:28,847
+5. price = replaceAll("\s", "").toInteger()
+
+140
+00:00:28,940 --> 00:00:28,941
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+141
+00:00:28,992 --> 00:00:28,992
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+142
+00:00:28,995 --> 00:00:28,995
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+143
+00:00:28,998 --> 00:00:28,998
+1. name = toUpperCase().split(" ")
+
+144
+00:00:29,053 --> 00:00:29,053
+5. price = replaceAll("\s", "").toInteger()
+
+145
+00:00:29,076 --> 00:00:29,077
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+146
+00:00:29,093 --> 00:00:29,093
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+147
+00:00:29,096 --> 00:00:29,097
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+148
+00:00:29,099 --> 00:00:29,099
+1. name = toUpperCase().split(" ")
+
+149
+00:00:29,123 --> 00:00:29,124
+5. price = replaceAll("\s", "").toInteger()
+
+150
+00:00:29,154 --> 00:00:29,155
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+151
+00:00:29,168 --> 00:00:29,168
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+152
+00:00:29,169 --> 00:00:29,169
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+153
+00:00:29,171 --> 00:00:29,171
+1. name = toUpperCase().split(" ")
+
+154
+00:00:29,194 --> 00:00:29,195
+5. price = replaceAll("\s", "").toInteger()
+
+155
+00:00:29,219 --> 00:00:29,220
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+156
+00:00:29,244 --> 00:00:29,245
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+157
+00:00:29,248 --> 00:00:29,249
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+158
+00:00:29,251 --> 00:00:29,251
+1. name = toUpperCase().split(" ")
+
+159
+00:00:29,275 --> 00:00:29,275
+5. price = replaceAll("\s", "").toInteger()
+
+160
+00:00:29,303 --> 00:00:29,303
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+161
+00:00:29,321 --> 00:00:29,322
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+162
+00:00:29,323 --> 00:00:29,323
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+163
+00:00:29,325 --> 00:00:29,325
+1. name = toUpperCase().split(" ")
+
+164
+00:00:29,348 --> 00:00:29,348
+5. price = replaceAll("\s", "").toInteger()
+
+165
+00:00:29,372 --> 00:00:29,372
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+166
+00:00:29,389 --> 00:00:29,389
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+167
+00:00:29,391 --> 00:00:29,391
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+168
+00:00:29,393 --> 00:00:29,393
+1. name = toUpperCase().split(" ")
+
+169
+00:00:29,422 --> 00:00:29,422
+5. price = replaceAll("\s", "").toInteger()
+
+170
+00:00:29,444 --> 00:00:29,444
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+171
+00:00:29,463 --> 00:00:29,465
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+172
+00:00:29,467 --> 00:00:29,468
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+173
+00:00:29,469 --> 00:00:29,470
+1. name = toUpperCase().split(" ")
+
+174
+00:00:29,497 --> 00:00:29,498
+5. price = replaceAll("\s", "").toInteger()
+
+175
+00:00:29,531 --> 00:00:29,532
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+176
+00:00:29,548 --> 00:00:29,548
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+177
+00:00:29,550 --> 00:00:29,550
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+178
+00:00:29,552 --> 00:00:29,553
+1. name = toUpperCase().split(" ")
+
+179
+00:00:29,584 --> 00:00:29,585
+5. price = replaceAll("\s", "").toInteger()
+
+180
+00:00:29,614 --> 00:00:29,615
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+181
+00:00:29,629 --> 00:00:29,629
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+182
+00:00:29,630 --> 00:00:29,631
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+183
+00:00:29,632 --> 00:00:29,632
+1. name = toUpperCase().split(" ")
+
+184
+00:00:29,655 --> 00:00:29,656
+5. price = replaceAll("\s", "").toInteger()
+
+185
+00:00:29,680 --> 00:00:29,680
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+186
+00:00:29,694 --> 00:00:29,695
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+187
+00:00:29,697 --> 00:00:29,698
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+188
+00:00:29,701 --> 00:00:29,701
+1. name = toUpperCase().split(" ")
+
+189
+00:00:29,722 --> 00:00:29,722
+5. price = replaceAll("\s", "").toInteger()
+
+190
+00:00:29,745 --> 00:00:29,745
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+191
+00:00:29,760 --> 00:00:29,761
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+192
+00:00:29,762 --> 00:00:29,763
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+193
+00:00:29,765 --> 00:00:29,766
+1. name = toUpperCase().split(" ")
+
+194
+00:00:29,794 --> 00:00:29,794
+5. price = replaceAll("\s", "").toInteger()
+
+195
+00:00:29,823 --> 00:00:29,824
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+196
+00:00:29,837 --> 00:00:29,838
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+197
+00:00:29,839 --> 00:00:29,839
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+198
+00:00:29,841 --> 00:00:29,841
+1. name = toUpperCase().split(" ")
+
+199
+00:00:29,872 --> 00:00:29,873
+5. price = replaceAll("\s", "").toInteger()
+
+200
+00:00:29,897 --> 00:00:29,898
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+201
+00:00:29,912 --> 00:00:29,912
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+202
+00:00:29,913 --> 00:00:29,914
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+203
+00:00:29,915 --> 00:00:29,915
+1. name = toUpperCase().split(" ")
+
+204
+00:00:29,944 --> 00:00:29,945
+5. price = replaceAll("\s", "").toInteger()
+
+205
+00:00:29,968 --> 00:00:29,969
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+206
+00:00:29,988 --> 00:00:29,988
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+207
+00:00:29,989 --> 00:00:29,989
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+208
+00:00:29,991 --> 00:00:29,991
+1. name = toUpperCase().split(" ")
+
+209
+00:00:30,014 --> 00:00:30,014
+5. price = replaceAll("\s", "").toInteger()
+
+210
+00:00:30,040 --> 00:00:30,041
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+211
+00:00:30,059 --> 00:00:30,059
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+212
+00:00:30,061 --> 00:00:30,061
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+213
+00:00:30,064 --> 00:00:30,065
+1. name = toUpperCase().split(" ")
+
+214
+00:00:30,094 --> 00:00:30,094
+5. price = replaceAll("\s", "").toInteger()
+
+215
+00:00:30,129 --> 00:00:30,130
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+216
+00:00:30,150 --> 00:00:30,151
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+217
+00:00:30,152 --> 00:00:30,153
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+218
+00:00:30,154 --> 00:00:30,155
+1. name = toUpperCase().split(" ")
+
+219
+00:00:30,184 --> 00:00:30,185
+5. price = replaceAll("\s", "").toInteger()
+
+220
+00:00:30,218 --> 00:00:30,219
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+221
+00:00:30,241 --> 00:00:30,242
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+222
+00:00:30,245 --> 00:00:30,245
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+223
+00:00:30,248 --> 00:00:30,248
+1. name = toUpperCase().split(" ")
+
+224
+00:00:30,279 --> 00:00:30,279
+5. price = replaceAll("\s", "").toInteger()
+
+225
+00:00:30,329 --> 00:00:30,330
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+226
+00:00:30,351 --> 00:00:30,351
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+227
+00:00:30,353 --> 00:00:30,353
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+228
+00:00:30,355 --> 00:00:30,355
+1. name = toUpperCase().split(" ")
+
+229
+00:00:30,392 --> 00:00:30,392
+5. price = replaceAll("\s", "").toInteger()
+
+230
+00:00:30,419 --> 00:00:30,419
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+231
+00:00:30,438 --> 00:00:30,438
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+232
+00:00:30,440 --> 00:00:30,440
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+233
+00:00:30,441 --> 00:00:30,441
+1. name = toUpperCase().split(" ")
+
+234
+00:00:30,465 --> 00:00:30,466
+5. price = replaceAll("\s", "").toInteger()
+
+235
+00:00:30,494 --> 00:00:30,494
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+236
+00:00:30,514 --> 00:00:30,514
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+237
+00:00:30,517 --> 00:00:30,518
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+238
+00:00:30,520 --> 00:00:30,521
+1. name = toUpperCase().split(" ")
+
+239
+00:00:30,555 --> 00:00:30,555
+5. price = replaceAll("\s", "").toInteger()
+
+240
+00:00:30,581 --> 00:00:30,582
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+241
+00:00:30,601 --> 00:00:30,601
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+242
+00:00:30,603 --> 00:00:30,603
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+243
+00:00:30,605 --> 00:00:30,606
+1. name = toUpperCase().split(" ")
+
+244
+00:00:30,631 --> 00:00:30,631
+5. price = replaceAll("\s", "").toInteger()
+
+245
+00:00:30,654 --> 00:00:30,655
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+246
+00:00:30,673 --> 00:00:30,674
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+247
+00:00:30,675 --> 00:00:30,676
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+248
+00:00:30,677 --> 00:00:30,678
+1. name = toUpperCase().split(" ")
+
+249
+00:00:30,704 --> 00:00:30,705
+5. price = replaceAll("\s", "").toInteger()
+
+250
+00:00:30,737 --> 00:00:30,738
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+251
+00:00:30,753 --> 00:00:30,754
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+252
+00:00:30,755 --> 00:00:30,755
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+253
+00:00:30,757 --> 00:00:30,757
+1. name = toUpperCase().split(" ")
+
+254
+00:00:30,786 --> 00:00:30,787
+5. price = replaceAll("\s", "").toInteger()
+
+255
+00:00:30,812 --> 00:00:30,813
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+256
+00:00:30,829 --> 00:00:30,830
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+257
+00:00:30,831 --> 00:00:30,832
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+258
+00:00:30,833 --> 00:00:30,833
+1. name = toUpperCase().split(" ")
+
+259
+00:00:30,860 --> 00:00:30,860
+5. price = replaceAll("\s", "").toInteger()
+
+260
+00:00:30,884 --> 00:00:30,884
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+261
+00:00:30,900 --> 00:00:30,900
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+262
+00:00:30,902 --> 00:00:30,902
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+263
+00:00:30,903 --> 00:00:30,904
+1. name = toUpperCase().split(" ")
+
+264
+00:00:30,926 --> 00:00:30,927
+5. price = replaceAll("\s", "").toInteger()
+
+265
+00:00:30,955 --> 00:00:30,956
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+266
+00:00:30,972 --> 00:00:30,972
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+267
+00:00:30,974 --> 00:00:30,974
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+268
+00:00:30,976 --> 00:00:30,976
+1. name = toUpperCase().split(" ")
+
+269
+00:00:31,006 --> 00:00:31,006
+5. price = replaceAll("\s", "").toInteger()
+
+270
+00:00:31,033 --> 00:00:31,033
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+271
+00:00:31,053 --> 00:00:31,054
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+272
+00:00:31,055 --> 00:00:31,055
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+273
+00:00:31,057 --> 00:00:31,057
+1. name = toUpperCase().split(" ")
+
+274
+00:00:31,091 --> 00:00:31,091
+5. price = replaceAll("\s", "").toInteger()
+
+275
+00:00:31,123 --> 00:00:31,124
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+276
+00:00:31,144 --> 00:00:31,145
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+277
+00:00:31,147 --> 00:00:31,147
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+278
+00:00:31,149 --> 00:00:31,150
+1. name = toUpperCase().split(" ")
+
+279
+00:00:31,178 --> 00:00:31,179
+5. price = replaceAll("\s", "").toInteger()
+
+280
+00:00:31,205 --> 00:00:31,205
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+281
+00:00:31,222 --> 00:00:31,222
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+282
+00:00:31,223 --> 00:00:31,224
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+283
+00:00:31,225 --> 00:00:31,226
+1. name = toUpperCase().split(" ")
+
+284
+00:00:31,253 --> 00:00:31,253
+5. price = replaceAll("\s", "").toInteger()
+
+285
+00:00:31,283 --> 00:00:31,283
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+286
+00:00:31,300 --> 00:00:31,300
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+287
+00:00:31,301 --> 00:00:31,301
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+288
+00:00:31,302 --> 00:00:31,303
+1. name = toUpperCase().split(" ")
+
+289
+00:00:31,335 --> 00:00:31,336
+5. price = replaceAll("\s", "").toInteger()
+
+290
+00:00:31,367 --> 00:00:31,368
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+291
+00:00:31,386 --> 00:00:31,386
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+292
+00:00:31,387 --> 00:00:31,387
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+293
+00:00:31,389 --> 00:00:31,389
+1. name = toUpperCase().split(" ")
+
+294
+00:00:31,417 --> 00:00:31,417
+5. price = replaceAll("\s", "").toInteger()
+
+295
+00:00:31,444 --> 00:00:31,445
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+296
+00:00:31,463 --> 00:00:31,463
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+297
+00:00:31,465 --> 00:00:31,465
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+298
+00:00:31,466 --> 00:00:31,466
+1. name = toUpperCase().split(" ")
+
+299
+00:00:31,490 --> 00:00:31,491
+5. price = replaceAll("\s", "").toInteger()
+
+300
+00:00:31,520 --> 00:00:31,520
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+301
+00:00:31,538 --> 00:00:31,539
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+302
+00:00:31,541 --> 00:00:31,541
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+303
+00:00:31,543 --> 00:00:31,544
+1. name = toUpperCase().split(" ")
+
+304
+00:00:31,594 --> 00:00:31,595
+5. price = replaceAll("\s", "").toInteger()
+
+305
+00:00:31,686 --> 00:00:31,686
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+306
+00:00:31,705 --> 00:00:31,706
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+307
+00:00:31,708 --> 00:00:31,709
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+308
+00:00:31,710 --> 00:00:31,711
+1. name = toUpperCase().split(" ")
+
+309
+00:00:31,735 --> 00:00:31,735
+5. price = replaceAll("\s", "").toInteger()
+
+310
+00:00:31,759 --> 00:00:31,759
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+311
+00:00:31,785 --> 00:00:31,785
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+312
+00:00:31,787 --> 00:00:31,787
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+313
+00:00:31,789 --> 00:00:31,789
+1. name = toUpperCase().split(" ")
+
+314
+00:00:31,815 --> 00:00:31,816
+5. price = replaceAll("\s", "").toInteger()
+
+315
+00:00:31,846 --> 00:00:31,847
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+316
+00:00:31,866 --> 00:00:31,866
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+317
+00:00:31,867 --> 00:00:31,868
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+318
+00:00:31,869 --> 00:00:31,869
+1. name = toUpperCase().split(" ")
+
+319
+00:00:31,902 --> 00:00:31,902
+5. price = replaceAll("\s", "").toInteger()
+
+320
+00:00:31,932 --> 00:00:31,933
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+321
+00:00:31,950 --> 00:00:31,950
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+322
+00:00:31,952 --> 00:00:31,953
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+323
+00:00:31,955 --> 00:00:31,955
+1. name = toUpperCase().split(" ")
+
+324
+00:00:31,987 --> 00:00:31,987
+5. price = replaceAll("\s", "").toInteger()
+
+325
+00:00:32,019 --> 00:00:32,020
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+326
+00:00:32,037 --> 00:00:32,037
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+327
+00:00:32,038 --> 00:00:32,038
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+328
+00:00:32,040 --> 00:00:32,040
+1. name = toUpperCase().split(" ")
+
+329
+00:00:32,076 --> 00:00:32,077
+5. price = replaceAll("\s", "").toInteger()
+
+330
+00:00:32,119 --> 00:00:32,120
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+331
+00:00:32,141 --> 00:00:32,142
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+332
+00:00:32,144 --> 00:00:32,144
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+
+333
+00:00:32,146 --> 00:00:32,147
+1. name = toUpperCase().split(" ")
+
+334
+00:00:32,185 --> 00:00:32,185
+5. price = replaceAll("\s", "").toInteger()
+
+335
+00:00:32,211 --> 00:00:32,212
+9. if (!(verifyMatch(name[0], getText().toUpperCase(), false)))
+
+336
+00:00:32,228 --> 00:00:32,229
+13. if (!(verifyGreaterThanOrEqual(t_price, price)))
+
+337
+00:00:32,230 --> 00:00:32,230
+17. if (!(verifyLessThanOrEqual(f_price, price)))
+

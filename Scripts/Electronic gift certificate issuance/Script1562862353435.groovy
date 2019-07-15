@@ -13,6 +13,8 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.WebElement as WebElement
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
+
 
 'Открытие браузера'
 WebUI.openBrowser('https://www.rendez-vous.ru/')
@@ -54,5 +56,6 @@ WebUI.sendKeys(findTestObject('GiftCertificatePage/input_email'), 'qwerty@list.r
 WebUI.click(findTestObject('GiftCertificatePage/checkbox_rule'))
 
 'Кнопка "Оплатить" доступна'
-WebUI.verifyElementClickable(findTestObject('GiftCertificatePage/btn_pay'))
-
+if (!WebUI.verifyElementClickable(findTestObject('GiftCertificatePage/btn_pay'))){
+	KeywordUtil.markFailed('ERROR: The Button "Оплатить" Does NOT CLICKABLE')
+}

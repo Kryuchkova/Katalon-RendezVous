@@ -13,6 +13,7 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.WebElement as WebElement
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 'Открытие браузера'
 WebUI.openBrowser('https://www.rendez-vous.ru/')
@@ -80,5 +81,7 @@ WebUI.click(findTestObject('GoodsPage/btn_booking'))
 WebUI.click(findTestObject('BookingPage/radiobtn_shop_option'))
 
 'Кнопка "Отправить бронь" доступна'
-WebUI.verifyElementClickable(findTestObject('BookingPage/btn_submit'))
+if (!WebUI.verifyElementClickable(findTestObject('BookingPage/btn_submit'))){
+	KeywordUtil.markFailed('ERROR: The Button "Отправить бронь" Does NOT CLICKABLE')
+}
 

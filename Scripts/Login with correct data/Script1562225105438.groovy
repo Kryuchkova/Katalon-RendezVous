@@ -13,6 +13,7 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 'Открытие браузера'
 WebUI.openBrowser('https://www.rendez-vous.ru/')
@@ -50,7 +51,9 @@ WebUI.delay(2)
 email_form = WebUI.getText(findTestObject('UserPage/form_email'))
 
 'Сравнение логина и e-mail'
-WebUI.verifyMatch(email_user, email_form, false)
+if (!WebUI.verifyMatch(email_user, email_form, false)){
+	KeywordUtil.markFailed('ERROR: The Actual Login Does NOT Match the User Email')
+}
 
 'Проверка изменения иконки личного кабинета'
 WebUI.verifyElementVisible(findTestObject('UserPage/lbl_user'))
