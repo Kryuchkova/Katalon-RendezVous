@@ -60,5 +60,3 @@ WebUI.verifyElementVisible(findTestObject('UserPage/lbl_user'))
 
 'Выход из личного кабинета'
 WebUI.click(findTestObject('UserPage/btn_exit'))
-
-

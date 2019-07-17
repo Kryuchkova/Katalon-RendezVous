@@ -52,4 +52,10 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/Checkout delivery to the store</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>bbbec91e-8f25-4adb-a904-ec08b5af90fc</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Additional discount to pay online</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>

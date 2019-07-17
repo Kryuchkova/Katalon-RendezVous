@@ -31,7 +31,6 @@ public class HighlightElement {
 				println WebUI.takeScreenshot(fullPath)
 			}
 		} catch (Exception e) {
-			// TODO use Katalon Logging
 			e.printStackTrace()
 		}
 	}

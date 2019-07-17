@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>Other Test Suite</name>
+   <name>Service Test Suite</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -10,12 +10,6 @@
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <testSuiteGuid>2d7f381f-7ee7-4287-b5fd-462ec6a4acbc</testSuiteGuid>
-   <testCaseLink>
-      <guid>9fff7ba9-69c2-4bb0-b48a-f3dde94fd3f0</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Additional discount to pay online</testCaseId>
-   </testCaseLink>
    <testCaseLink>
       <guid>c1216dce-0be2-48b9-b5f0-614e2663a8f8</guid>
       <isReuseDriver>false</isReuseDriver>

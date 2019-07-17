@@ -14,6 +14,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
+import org.openqa.selenium.Keys as Keys
 
 'Открытие браузера'
 WebUI.openBrowser('https://www.rendez-vous.ru/')
@@ -40,6 +41,7 @@ for (i = 0; i < Types.size(); i++) {
     if (Types.get(i).getText().indexOf('Кошелёк') != -1) {
         'Выбор тип "Кошелёк"'
         Types.get(i).click()
+
         break
     }
 }
@@ -51,6 +53,8 @@ WebUI.click(findTestObject('GoodsListPage/btn_option_price'))
 WebUI.sendKeys(findTestObject('GoodsListPage/input_from_price'), '3000')
 
 'Установка верхней границы'
+WebUI.doubleClick(findTestObject('GoodsListPage/input_to_price'))
+WebUI.sendKeys(findTestObject('GoodsListPage/input_to_price'), Keys.chord(Keys.DELETE))
 WebUI.sendKeys(findTestObject('GoodsListPage/input_to_price'), '13000')
 
 'Применение фильтров'
@@ -58,30 +62,40 @@ WebUI.click(findTestObject('GoodsListPage/btn_apply'))
 WebUI.delay(3)
 
 'Сбор всех цен, названий и фильтров в массив'
+
 'Цены товаров'
 List<WebElement> Prices = WebUI.findWebElements(findTestObject('GoodsListPage/lbl_prices'), 5)
+
 'Названия'
 List<WebElement> Names = WebUI.findWebElements(findTestObject('GoodsListPage/lbl_names'), 5)
+
 'Фильтры'
 List<WebElement> Filters = WebUI.findWebElements(findTestObject('GoodsListPage/lbl_filters'), 5)
-s = Filters.get(1).getText().replaceAll('\\s','').split("-")
+
+s = Filters.get(1).getText().replaceAll('\\s', '').split('-')
+
 println(s)
+
 f_price = s[0].toInteger()
+
 t_price = s[1].toInteger()
+
 'Проверяем товары на соответствие фильтрам'
 for (i = 0; i < Prices.size(); i++) {
-	name = Names.get(i).getText().toUpperCase().split(" ")
-	price = Prices.get(i).getText().replaceAll('\\s','').toInteger()
-	
-	if (!WebUI.verifyMatch(name[0], Filters.get(0).getText().toUpperCase(), false)){
-		KeywordUtil.markFailed('ERROR: The Actual Type Does NOT MATCH the Expected Type')
-	}
-	if (!WebUI.verifyGreaterThanOrEqual(t_price, price)){
-		KeywordUtil.markFailed('ERROR: The Actual Price Does NOT LESS THAN Or EQUAL the Upper Price Limit')
-	}
-	if (!WebUI.verifyLessThanOrEqual(f_price, price)){
-		KeywordUtil.markFailed('ERROR: The Actual Price Does NOT GREATER THAN Or EQUAL the Lower Price Limit')
-	}	
-}
+    name = Names.get(i).getText().toUpperCase().split(' ')
 
+    price = Prices.get(i).getText().replaceAll('\\s', '').toInteger()
+
+    if (!(WebUI.verifyMatch(name[0], Filters.get(0).getText().toUpperCase(), false))) {
+        KeywordUtil.markFailed('ERROR: The Actual Type Does NOT MATCH the Expected Type')
+    }
+    
+    if (!(WebUI.verifyGreaterThanOrEqual(t_price, price))) {
+        KeywordUtil.markFailed('ERROR: The Actual Price Does NOT LESS THAN Or EQUAL the Upper Price Limit')
+    }
+    
+    if (!(WebUI.verifyLessThanOrEqual(f_price, price))) {
+        KeywordUtil.markFailed('ERROR: The Actual Price Does NOT GREATER THAN Or EQUAL the Lower Price Limit')
+    }
+}
 
